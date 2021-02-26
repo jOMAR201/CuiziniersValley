@@ -28,10 +28,5 @@ During stand-up, each team member will stand up and take turns discussing three 
 - If a pull request from a teammate has been merged and you working on a branch but are not ready to push your changes, you can still pull those changes while continuing to work on your feature branch. To do so, add and commit any changes on your local feature branch. Check out your master or development branch and pull the changes. Then, check out your feature branch and run the command `git merge master` if the master branch was pulled and `git merge development` if the development branch was pulled.
 
 - Then, create a pull request from your feature branch to the development branch. Do not merge your own pull request. Have one of your team members review and approve the request.
-<<<<<<< HEAD
 
-We created a new branch for development
-
-Added a new lines
-=======
->>>>>>> 8d45790101c38fbd75f4a42eaf7831ebca5488c3
+New line
