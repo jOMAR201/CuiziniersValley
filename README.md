@@ -30,3 +30,4 @@ During stand-up, each team member will stand up and take turns discussing three 
 - Then, create a pull request from your feature branch to the development branch. Do not merge your own pull request. Have one of your team members review and approve the request.
 
 Deleted the line
+Added new line
