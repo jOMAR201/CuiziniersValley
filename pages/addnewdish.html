@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add new dish </title>
+    <link rel="resetsheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/addDishstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- it will the same from another pages, nav bar and link .. etc  -->
+    </header>
+    <main>
+        <!-- add new desh by user, In this form ; user will add desh to the specific country  -->
+
+        <form action="" id="addNewDishForm">
+            <fieldset>
+                <!-- the action will be empty in 201 -->
+                <label for="nameOfTheDish">Dish Name:</label>
+                <input type="text" id="nameOfTheDish" name="dishName"><br>
+                <label for="countryNewDish">Country</label>
+                <select name="countryNewDish" id="countryNewDish">
+    <option value="jordan">Jordan</option>
+    <option value="iraq">Iraq</option>
+    <option value="turkey">Turkey</option>
+    <option value="syria">Syria</option>
+  </select><br>
+                <label for="TypeDish">Type</label>
+                <select name="dishType" id="TypeDish">
+<option value="breakfast">Breakfast</option>
+<option value="lunch">Lunch</option>
+<option value="dinner">Dinner</option>
+</select><br><br>
+                <!-- this data for Recipe -->
+                <fieldset id="recipeForm">
+                    <label id="recipetext" for="ingredient1">Recipe</label>
+                    <br><br>
+
+                    <!-- this button for add now ingredient , must link it with laibrary -->
+                    <button class="btn">Add</button>
+                    <label for="ingredient1 ">first ingredient</label>
+                    <input type="text " id="ingredient1 " name="ingredient1 ">
+                    <label for="Quantity">Quantity</label>
+                    <input type="number" id="Quantity" name="Quantity"><br><br>
+                    <label for="prepare">How to prepare</label>
+                    <input type="text" id="prepare" name="prepareDish" placeholder="Describe how the dish is prepared">
+
+                    <button class="btn">Remove</button>
+                    <!-- button for add(PLUS Icon) and button for remove  (- icon ) -->
+
+                    <!-- this p for show procedures  for prepared -->
+                    <p></p>
+                    <br>
+                    <!-- General describtion -->
+                    <input type="text" id="describtion" name="describtion" placeholder="General describtion"><br>
+                    <input class="btn" type="submit" value="Finish">
+
+                </fieldset>
+            </fieldset>
+        </form>
+
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
