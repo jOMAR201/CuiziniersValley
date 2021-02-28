@@ -1,5 +1,70 @@
 "use strict";
 
+
+const DishDataArray = function (data) {
+  this.data = data;
+}
+
+DishDataArray.prototype.addNewDish = function(dish) {
+  let countryExist = false;
+  let dishExist = false;
+  for (let i = 0; i < this.data.length; i++) {
+    if (dish.dishCountry == this.data[i].dishCountry) {
+      countryExist = true;
+      for (let index = 0; index < this.data[i].dishes.length; index++) {
+        if (dish.dishName === this.data[i].dishes[index].dishName) {
+          alert("Dish is already exist")
+          dishExist = true;
+          break;
+        }
+      }
+      if (!dishExist) {
+        this.data[i].dishes.push(dish);
+        break;
+      }
+    }
+
+
+  }
+
+  if (!countryExist) {
+    let newCountry = new DishArray(dish.dishCountry);
+    newCountry.dishes.push(dish);
+    this.data.push(newCountry);
+  }
+
+}
+DishDataArray.prototype.addToLocalStorage = function () {
+  localStorage.setItem('dishArrays', JSON.stringify(this.items));
+}
+// creating dishes 
+const DishObject = function (name, country, info, imgPath, ingredients, instructions) {
+  this.dishName = name;
+  this.dishImage = imgPath;
+  this.dishCountry = country;
+  this.dishInfo = info;
+  this.dishIngredients = ingredients;
+  this.dishInstructions = instructions;
+ DishObject.allDishes.push(this);
+}
+DishObject.allDishes = [];
+
+// Array class that holds each country and the dishes it has
+const DishArray = function (countryName) {
+  this.dishCountry = countryName;
+  this.dishes = [];
+}
+
+
+
+let dish = new DishObject('Mansaf', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('kabseh', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('mjadara', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('mjadara', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Dolma', 'Iraq', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+
+
+
 const menuIcon = document.getElementById("humburger-menu");
 console.log(menuIcon);
 const navbar = document.getElementById("navbar");

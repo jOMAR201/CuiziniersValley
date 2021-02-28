@@ -20,7 +20,7 @@
             <fieldset>
                 <!-- the action will be empty in 201 -->
                 <label for="nameOfTheDish">Dish Name:</label>
-                <input type="text" id="nameOfTheDish" name="dishName"><br>
+                <input type="text" id="nameOfTheDish" name="dishName" value=""><br>
                 <label for="countryNewDish">Country</label>
                 <select name="countryNewDish" id="countryNewDish">
     <option value="jordan">Jordan</option>
@@ -56,7 +56,7 @@
                     <br>
                     <!-- General describtion -->
                     <input type="text" id="describtion" name="describtion" placeholder="General describtion"><br>
-                    <input class="btn" type="submit" value="Finish">
+                    <input class="btn" type="submit" id='finishNewDish' value="Finish">
 
                 </fieldset>
             </fieldset>
@@ -65,6 +65,10 @@
     </main>
     <footer>
     </footer>
+
+    <script src="/javascript/addNewDish.js"></script>
+    <script src="/javascript/app.js"></script>
+
 </body>
 
 </html>
