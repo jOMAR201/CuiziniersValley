@@ -47,7 +47,8 @@
 
 
                 <!-- this data for Recipe -->
-                <fieldset id="recipeForm">
+
+                <fieldset id="recipeField">
 
                     <!-- Tilte of New field -->
 
@@ -57,18 +58,13 @@
 
 
 
-
-
-
-
-
                     <!-- this button for add now ingredient , must link it with laibrary -->
                     <button class="btn" id="addButton">Add</button>
                     <label for="ingredientNew">ingredient</label>
                     <input type="text " id="ingredientNew" name="ingredientNew">
                     <label for="Quantity">Quantity</label>
 
-                    <input type="number" id="Quantity" name="Quantity">
+                    <input type="number" id="Quantity" name="Quantity"  min="0"  novalidate="novalidate" >
                     <p>grams</p>
 
 
@@ -85,6 +81,7 @@
                     <!--  -->
                     <label for="instructions">How to prepare</label>
                     <input type="text" id="instructions" name="instructions" placeholder="please write the steps one by one ">
+                    <button class="btn" id="addInstruction">Add</button>
 
                     <ol id="listOfInstructions">
 
