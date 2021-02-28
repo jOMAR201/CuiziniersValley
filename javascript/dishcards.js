@@ -1,17 +1,30 @@
 'use strict';
-const dishArraysByContry = new DishDataArray([]);
-for (let i in DishObject.allDishes) {
-    dishArraysByContry.addNewDish(DishObject.allDishes[i]);
-}
+
+let dataObj = localStorage.getItem(JSON.parse('dataArray'));
+// add all dihes to the dataObject
+// const dishArraysByContry = new DishDataArray([]);
+// for (let i in DishObject.allDishes) {
+//     dishArraysByContry.addNewDish(DishObject.allDishes[i]);
+// }
+// let targetPageDiv = document.querySelectorAll('section.cuisineSection');
+// for (let index = 0; index < dishArraysByContry.data.length; index++) {
+//     for (let j = 0; j < targetPageDiv.length; j++) {
+//         if (targetPageDiv[j].id == dishArraysByContry.data[index].dishCountry) {
+//             for (let i = 0; i < dishArraysByContry.data[index].dishes.length; i++) {
+//                 createCard(dishArraysByContry.data[index].dishes[i]);
+//             }
+//         }
+//     }
+// }
+
 let targetPageDiv = document.querySelectorAll('section.cuisineSection');
-for (let index = 0; index < dishArraysByContry.data.length; index++) {
-    for (let j = 0; j < targetPageDiv.length; j++) {
-        if (targetPageDiv[j].id == dishArraysByContry.data[index].dishCountry) {
-            for (let i = 0; i < dishArraysByContry.data[index].dishes.length; i++) {
-                createCard(dishArraysByContry.data[index].dishes[i]);
-            }
+for (let targetDiv in targetPageDiv) {
+    for (let dish in dataObj) {
+        if (dataObj[dish].dishCountry == targetPageDiv[targetDiv].id) {
+            createCard(dataObj[dish]);
         }
     }
+    
 }
 
 // for (let i in targetPageDiv) {

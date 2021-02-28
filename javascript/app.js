@@ -34,34 +34,64 @@ DishDataArray.prototype.addNewDish = function(dish) {
   }
 
 }
-DishDataArray.prototype.addToLocalStorage = function () {
-  localStorage.setItem('dishArrays', JSON.stringify(this.items));
-}
+// DishDataArray.prototype.addToLocalStorage = function () {
+//   localStorage.setItem('dishArrays', JSON.stringify(this.items));
+// }
 // creating dishes 
-const DishObject = function (name, country, info, imgPath, ingredients, instructions) {
+const DishObject = function (name, country,type, info, imgPath, ingredients, instructions) {
   this.dishName = name;
   this.dishImage = imgPath;
   this.dishCountry = country;
   this.dishInfo = info;
+  this.dishType = type;
   this.dishIngredients = ingredients;
   this.dishInstructions = instructions;
- DishObject.allDishes.push(this);
+  addNewDishToTheStorage(this);
 }
+function addNewDishToTheStorage(dish) {
+  // First: parse
+  let previousData = [];
+  if (localStorage.getItem('dishArrays') !== undefined || localStorage.getItem('dishArrays') !== null) {
+    previousData = localStorage.getItem('dishArrays');
+  } else {
+     previousData.push(dish);
+    // previousData = [];
+  }
+  // check exisrence
+  if (!checkDishes(dish,previousData)) {
+    // push to the object if not existed
+    previousData.push(dish);
+    // set local storage
+    localStorage.setItem('dishArrays',JSON.stringify(previousData))
+  } else {
+    // show message to the userif it is already there
+    console.log("Dish exist");
+  }
+  
+}
+
 DishObject.allDishes = [];
 
-// Array class that holds each country and the dishes it has
-const DishArray = function (countryName) {
-  this.dishCountry = countryName;
-  this.dishes = [];
+function checkDishes(dish, dataObj) {
+  for (let i in dataObj) {
+    if (dataObj[i].dishName.toLowerCase() === dish.dishName.toLowerCase() && dataObj[i].dishCountry.toLowerCase() === this.dishCountry.toLowerCase()) {
+      return true;
+    }
+  }
+  return false;
 }
+// Array class that holds each country and the dishes it has
+// const DishArray = function (countryName) {
+//   this.dishCountry = countryName;
+//   this.dishes = [];
+// }
 
 
 
-let dish = new DishObject('Mansaf', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('kabseh', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('mjadara', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('mjadara', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('Dolma', 'Iraq', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Mansaf', 'Jordan','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('kabseh', 'Jordan','breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('mjadara', 'Jordan', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Dolma', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 
 
 
