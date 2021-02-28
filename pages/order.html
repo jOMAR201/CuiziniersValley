@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/orderStyle.css">
+    <title>order</title>
+
+</head>
+<body>
+  <header>
+
+   <div style="width: 1000px; height: 200px; border:solid black;"><h1>header</h1></div>
+
+</header>
+     <main>
+         
+         <section class="cusiniesSection" >
+             <div class="Cuisine" title="Cuisine" style="text-align:center; font-family: cursive; font-weight:bolder;">Cuisine</div>
+             <nav>
+                <ul>
+                    <li><a href="#" class="kitchens">Jordanian</a></li>
+                    <li><a href="#" class="kitchens">Syrian</a></li>
+                    <li><a href="#" class="kitchens">Turkish</a></li>
+                    <li><a href="#" class="kitchens">Egyptian</a></li>
+                    <li><a href="#" class="kitchens">Iraqi</I></a></li>
+                </ul>
+             </nav>
+         </section>
+         <div class="orderSections">
+         <section class="orderForm">
+         <form id="restaurntOrder" >
+            <fieldset>
+                <label>
+                    <span class="allLabels">Restaurant</span>
+                    <select id="restaurant">restaurant</select>
+                  </label>
+                  <br><br>
+              <label>
+                <span class="allLabels">Main dish</span>
+                <select id="mainDish"></select>
+              </label>
+              <label>
+                <span class="allLabels"> Add</span>
+                <input id="quantityMain" type="number" />
+              </label>
+              <br><br>
+              <label>
+                <span class="allLabels">Side dish</span>
+                <select id="sideDish"></select>
+              </label>
+              <label>
+                <span class="allLabels"> Add</span>
+                <input id="quantitySide" type="number" />
+              </label>
+              <br><br>
+              <label>
+                <span class="allLabels">Drinks</span>
+                <select id="drink"></select>
+              </label>
+              <label>
+                <span class="allLabels" > Add</span>
+                <input id="quantityDrink" type="number" />
+              </label>
+              <br><br>
+              <label>
+                <span class="allLabels">Phone number</span>
+               <input type="number" id="phoneNumber">
+              </label>
+              <br><br>
+              <label>
+                <span class="allLabels">Adress</span>
+               <input type="text" name="address" id="address">
+              </label>
+              <br><br>
+              <input type="submit" value="Place order " />
+              <input type="reset" value="reset" id="reset">
+            </fieldset>
+          </form>
+        </section>
+        <section class="newaOrder"  >
+            <div  id="newOrder-container" >
+              <table id="orderTable">
+                <thead >
+                  <tr>
+                    <th>Delete</th>
+                    <th>Quantity</th>
+                    <th>Main dish</th>
+                    <th>side dish</th>
+                    <th>Drink </th>
+                    <th>Total price </th>
+
+                  </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+                
+              </table>
+            </div>
+          </section>
+        </div>
+
+    </main>
+    <footer>
+       
+    </footer>
+</body>
+</html>
