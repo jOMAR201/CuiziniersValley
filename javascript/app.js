@@ -50,6 +50,8 @@ new DishObject('kabseh', 'Jordan','breackfast', 'This dish is good', 'this is th
 new DishObject('mjadara', 'Jordan', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 new DishObject('Dolma', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 
+console.log('ALL DISHES',DishObject.allDishes);
+
 
 
 const menuIcon = document.getElementById("humburger-menu");

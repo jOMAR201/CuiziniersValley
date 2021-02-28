@@ -114,7 +114,7 @@ let deleteInstruction = function(event) {
 };
 // ----------------------------------------------------------------------------------------SUBMIT EVENT-------------------------------------------
 function CreateNewIgrediant(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     // IngredaintInput.innerText="  ";
     // recipeForm.reset();
@@ -134,5 +134,5 @@ function CreateNewIgrediant(event) {
     let describtion = document.getElementById("info").value;
     // console.log("describtion", describtion);
     // add new object  from form data
-    new DishObject(name, country, Type, describtion, imagePath, ingrediantArray, instructionArray);
+    let NewItem=new DishObject(name, country, Type, describtion, imagePath, ingrediantArray, instructionArray);
 }
