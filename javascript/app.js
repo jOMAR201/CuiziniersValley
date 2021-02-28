@@ -1,43 +1,7 @@
 "use strict";
 
 
-const DishDataArray = function (data) {
-  this.data = data;
-}
 
-DishDataArray.prototype.addNewDish = function(dish) {
-  let countryExist = false;
-  let dishExist = false;
-  for (let i = 0; i < this.data.length; i++) {
-    if (dish.dishCountry == this.data[i].dishCountry) {
-      countryExist = true;
-      for (let index = 0; index < this.data[i].dishes.length; index++) {
-        if (dish.dishName === this.data[i].dishes[index].dishName) {
-          alert("Dish is already exist")
-          dishExist = true;
-          break;
-        }
-      }
-      if (!dishExist) {
-        this.data[i].dishes.push(dish);
-        break;
-      }
-    }
-
-
-  }
-
-  if (!countryExist) {
-    let newCountry = new DishArray(dish.dishCountry);
-    newCountry.dishes.push(dish);
-    this.data.push(newCountry);
-  }
-
-}
-// DishDataArray.prototype.addToLocalStorage = function () {
-//   localStorage.setItem('dishArrays', JSON.stringify(this.items));
-// }
-// creating dishes 
 const DishObject = function (name, country,type, info, imgPath, ingredients, instructions) {
   this.dishName = name;
   this.dishImage = imgPath;
@@ -46,46 +10,39 @@ const DishObject = function (name, country,type, info, imgPath, ingredients, ins
   this.dishType = type;
   this.dishIngredients = ingredients;
   this.dishInstructions = instructions;
-  addNewDishToTheStorage(this);
+  this.addNewDish();
 }
-function addNewDishToTheStorage(dish) {
-  // First: parse
-  let previousData = [];
-  if (localStorage.getItem('dishArrays') !== undefined || localStorage.getItem('dishArrays') !== null) {
-    previousData = localStorage.getItem('dishArrays');
+DishObject.allDishes = [];
+let previous;
+if (localStorage.getItem('dishesData')) {
+  previous = JSON.parse(localStorage.getItem('dishesData')); 
+}
+for (let i in previous) {
+  DishObject.allDishes.push(previous[i]);
+}
+
+DishObject.prototype.addNewDish = function () {
+  if (!this.checkIdDishExists()) {
+    DishObject.allDishes.push(this);
+    this.saveToLocalStorage();
   } else {
-     previousData.push(dish);
-    // previousData = [];
-  }
-  // check exisrence
-  if (!checkDishes(dish,previousData)) {
-    // push to the object if not existed
-    previousData.push(dish);
-    // set local storage
-    localStorage.setItem('dishArrays',JSON.stringify(previousData))
-  } else {
-    // show message to the userif it is already there
     console.log("Dish exist");
   }
-  
+
 }
 
-DishObject.allDishes = [];
+DishObject.prototype.saveToLocalStorage = function () {
+  localStorage.setItem('dishesData',JSON.stringify(DishObject.allDishes))
+}
 
-function checkDishes(dish, dataObj) {
-  for (let i in dataObj) {
-    if (dataObj[i].dishName.toLowerCase() === dish.dishName.toLowerCase() && dataObj[i].dishCountry.toLowerCase() === this.dishCountry.toLowerCase()) {
+DishObject.prototype.checkIdDishExists = function () {
+  for (let dish in DishObject.allDishes) {
+    if (DishObject.allDishes[dish].dishName.toLowerCase() === this.dishName.toLowerCase() && DishObject.allDishes[dish].dishCountry.toLowerCase() === this.dishCountry.toLowerCase()) {
       return true;
     }
   }
   return false;
 }
-// Array class that holds each country and the dishes it has
-// const DishArray = function (countryName) {
-//   this.dishCountry = countryName;
-//   this.dishes = [];
-// }
-
 
 
 new DishObject('Mansaf', 'Jordan','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
