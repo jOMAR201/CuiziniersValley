@@ -16,47 +16,91 @@
     <main>
         <!-- add new desh by user, In this form ; user will add desh to the specific country  -->
 
+
+        <!-- name, country, info, imgPath, ingredients, instructions -->
+
         <form action="" id="addNewDishForm">
             <fieldset>
                 <!-- the action will be empty in 201 -->
+
+                <!-- Name -->
                 <label for="nameOfTheDish">Dish Name:</label>
                 <input type="text" id="nameOfTheDish" name="dishName" value=""><br>
+
+                <!-- Country  -->
                 <label for="countryNewDish">Country</label>
                 <select name="countryNewDish" id="countryNewDish">
-    <option value="jordan">Jordan</option>
-    <option value="iraq">Iraq</option>
-    <option value="turkey">Turkey</option>
-    <option value="syria">Syria</option>
-  </select><br>
+                    <option value="jordan">Jordan</option>
+                    <option value="iraq">Iraq</option>
+                    <option value="turkey">Turkey</option>
+                    <option value="syria">Syria</option>
+                </select><br>
+
+
+                <!-- Dish Type  -->
                 <label for="TypeDish">Type</label>
                 <select name="dishType" id="TypeDish">
-<option value="breakfast">Breakfast</option>
-<option value="lunch">Lunch</option>
-<option value="dinner">Dinner</option>
-</select><br><br>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select><br><br>
+
+
                 <!-- this data for Recipe -->
-                <fieldset id="recipeForm">
-                    <label id="recipetext" for="ingredient1">Recipe</label>
+
+                <fieldset id="recipeField">
+
+                    <!-- Tilte of New field -->
+
+
+                    <h1>Recipe</h1>
                     <br><br>
 
-                    <!-- this button for add now ingredient , must link it with laibrary -->
-                    <button class="btn">Add</button>
-                    <label for="ingredient1 ">first ingredient</label>
-                    <input type="text " id="ingredient1 " name="ingredient1 ">
-                    <label for="Quantity">Quantity</label>
-                    <input type="number" id="Quantity" name="Quantity"><br><br>
-                    <label for="prepare">How to prepare</label>
-                    <input type="text" id="prepare" name="prepareDish" placeholder="Describe how the dish is prepared">
 
-                    <button class="btn">Remove</button>
-                    <!-- button for add(PLUS Icon) and button for remove  (- icon ) -->
+
+                    <!-- this button for add now ingredient , must link it with laibrary -->
+                    <button class="btn" id="addButton">Add</button>
+                    <label for="ingredientNew">ingredient</label>
+                    <input type="text " id="ingredientNew" name="ingredientNew">
+                    <label for="Quantity">Quantity</label>
+
+                    <input type="number" id="Quantity" name="Quantity"  min="0"  novalidate="novalidate" >
+                    <p>grams</p>
+
+
+                    <br><br>
+
+                    <ol id="listOfIngrediants">
+
+
+                    </ol>
+
+
+
+
+                    <!--  -->
+                    <label for="instructions">How to prepare</label>
+                    <input type="text" id="instructions" name="instructions" placeholder="please write the steps one by one ">
+                    <button class="btn" id="addInstruction">Add</button>
+
+                    <ol id="listOfInstructions">
+
+
+                    </ol>
+
+
 
                     <!-- this p for show procedures  for prepared -->
-                    <p></p>
                     <br>
                     <!-- General describtion -->
-                    <input type="text" id="describtion" name="describtion" placeholder="General describtion"><br>
-                    <input class="btn" type="submit" id='finishNewDish' value="Finish">
+                    <label for="info">describtion</label>
+
+                    <input type="text" id="info" name="info" placeholder="General describtion"><br>
+                    <label for="img">Upload Image:</label>
+
+                        <!-- <input type="file" id="myFile" name="filename"> -->
+                    <input type="file" id="UploadImage" name="UploadImage" accept="image/*">
+                    <input class="btn" type="submit" id='submitButton' value="Finish">
 
                 </fieldset>
             </fieldset>
