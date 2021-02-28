@@ -1,24 +1,27 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  html,
-  body {
+}
+
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
-  }
-  body {
+}
+
+body {
     font-family: "Dosis", sans-serif;
     min-height: 100vh;
-  }
-  
-  header {
+}
+
+header {
     background-color: whitesmoke;
     padding: 10px;
     min-height: 100vh;
-  }
-  
-  /* .container {
+}
+
+
+/* .container {
     width: 100%;
   
     background: linear-gradient(
@@ -29,8 +32,8 @@
   
     background-image: center, no-repeat;
   } */
-  
-  .humburger-menu {
+
+.humburger-menu {
     width: 35px;
     /* background-color: blue; */
     height: 30px;
@@ -41,27 +44,28 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  
-  .line {
+}
+
+.line {
     width: 100%;
     height: 3px;
     background-color: chocolate;
     transition: all 0.8s;
-  }
-  .change .line-1 {
+}
+
+.change .line-1 {
     transform: rotateZ(-405deg) translate(-8px, 6px);
-  }
-  
-  .change .line-2 {
+}
+
+.change .line-2 {
     opacity: 0;
-  }
-  
-  .change .line-3 {
+}
+
+.change .line-3 {
     transform: rotateZ(405deg) translate(-8px, -6px);
-  }
-  
-  .navbar {
+}
+
+.navbar {
     width: 300px;
     height: 100%;
     background-color: #262626;
@@ -74,21 +78,22 @@
     border-radius: 70% 0 0 70%;
     transition: right 0.8s cubic-bezier(0.1, 0.7, 1, 1);
     z-index: 2;
-  }
-  .change {
+}
+
+.change {
     right: 0;
-  }
-  
-  .nav-list {
+}
+
+.nav-list {
     text-align: right;
-  }
-  
-  .nav-item {
+}
+
+.nav-item {
     list-style: none;
     margin: 25px;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     text-decoration: none;
     font-size: 22px;
     color: #eeee;
@@ -97,11 +102,12 @@
     text-transform: uppercase;
     padding: 3px 0;
     position: relative;
-  }
-  
-  /* make orage lines */
-  
-  .nav-link::before {
+}
+
+
+/* make orage lines */
+
+.nav-link::before {
     content: " ";
     width: 100%;
     height: 2px;
@@ -110,8 +116,9 @@
     left: 0;
     transform: scaleX(0);
     transition: transform 0.5s;
-  }
-  .nav-link::after {
+}
+
+.nav-link::after {
     content: " ";
     width: 100%;
     height: 2px;
@@ -120,47 +127,51 @@
     left: 0;
     transform: scaleX(0);
     transition: transform 0.5s;
-  }
-  
-  .nav-link::before {
+}
+
+.nav-link::before {
     top: 0;
     transform-origin: left;
-  }
-  .nav-link::after {
+}
+
+.nav-link::after {
     bottom: 0;
     transform-origin: right;
-  }
-  
-  /* Hover effect on menu */
-  
-  .nav-link:hover::before,
-  .nav-link:hover::after {
+}
+
+
+/* Hover effect on menu */
+
+.nav-link:hover::before,
+.nav-link:hover::after {
     transform: scaleX(1);
-  }
-  
-  #headerRightSide {
+}
+
+#headerRightSide {
     position: absolute;
     display: flex;
     flex-wrap: wrap-reverse;
     top: 0;
     margin: 15px 0;
     color: #eeee;
-  }
-  
-  #title {
+}
+
+#title {
     position: relative;
     padding: 10px;
     top: 33px;
     font-size: 48px;
     color: chocolate;
-  }
-  
-  /* #overlayEffect:hover{
+}
+
+
+/* #overlayEffect:hover{
           opacity: 100%;
           border: chocolate solid;
       } */
-  
-  /* #overlayEffect{
+
+
+/* #overlayEffect{
           position: absolute;
           bottom: 0;
           background: rgb(0, 0, 0);
@@ -177,25 +188,22 @@
           z-index: 1;
           
           } */
-  
-  #header2 {
+
+#header2 {
     min-height: 70vh;
     width: 100%;
     /* background-image: url(/images/001.jpg) ; */
-  
     background-repeat: no-repeat;
     background-size: cover;
-  
     position: absolute;
     top: 25%;
     /* display: block; */
     transition: all 0.8s;
     z-index: 1;
-  
     margin: auto;
-  }
-  
-  #EatwithoutBoundries {
+}
+
+#EatwithoutBoundries {
     position: absolute;
     display: block;
     font-size: 80px;
@@ -207,19 +215,20 @@
     font-family: "Dosis", sans-serif;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: whitesmoke;
-  }
-  
-  /* #overlayEffect:hover {
+}
+
+
+/* #overlayEffect:hover {
               opacity: 1;
             } */
-  
-  main {
+
+main {
     background-color: whitesmoke;
     padding: 10px;
     min-height: 100vh;
-  }
-  
-  #firstParagraph {
+}
+
+#firstParagraph {
     display: flex;
     position: relative;
     font-family: "Dosis", sans-serif;
@@ -228,199 +237,218 @@
     flex-wrap: wrap-reverse;
     max-width: 90%;
     margin: 30px;
-  }
-  
-  
-  
-  /* slider  */
-  
-  /* Slideshow container */
-  .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
+}
+
+
+/* slider  */
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
     }
-    
-    /* Hide the images by default */
-    .mySlides {
-      display: none;
+    to {
+        opacity: 1
     }
-    
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
     }
-    
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
+    to {
+        opacity: 1
     }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-    
-    /* Caption text */
-    .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-      margin: 0 0 20px 0;
-    }
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-    
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
-    }
-    
-    @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
-    }
-  
-  
-    /* Footer */
-    #container3{
-        width: 100%;
-        background-color: whitesmoke;
-        height: 250px;
-        
-    }
-  
-    #socialMedia{
-        display: block;
-        position: relative;
-        float: right;
-        top: 70px;
-        right: 50px;
-  
-    }
-  
-    #socialMedia li{
-  display: inline;      
-  margin: 5px;
-  
-  
-    }
-  
-  
-    /* form */
-  
-  
-    /* Style the form element with a border around it */
-  form {
-      position: relative;
-      left: 50px;
-      margin: 10px;
-  
-      width: 50%;
-      
-    }
-    
-    /* Add some padding and a grey background color to containers */
-    .container4 {
-        
-      padding: 20px;
-      background-color: whitesmoke;
-    }
-    
-    /* Style the input elements and the submit button */
-    input[type=text], input[type=submit] {
-      width: 40%;
-      padding: 12px;
-     
-      display: inline-block;
-      border: 1px solid chocolate;
-      background-color: whitesmoke;
-      box-sizing: border-box;
-    }
-    
-  
-    
-    /* Style the submit button */
-    input[type=submit] {
-      background-color: chocolate;
-      color: whitesmoke;
-      border: none;
-      width: 20%;
-      display: inline-block;
-  
-    }
-    
-    input[type=submit]:hover {
-      opacity: 0.8;
-          background-color: whitesmoke;
-  }
-    }
-    #name{
-  
-      background-color: whitesmoke;
-      border: chocolate solid 1px;
-    }
-  
-    #email{
-      background-color: whitesmoke;
-      border: chocolate solid 1px;
-  
-    }
-  
-    #subscribe{
-      font-family: "Dosis", sans-serif;
-      font-size: 22px;
-      color: saddlebrown;
-  
-  
-  
-    }
-  
-   
+}
+
+
+/* Footer */
+
+#container3 {
+    width: 100%;
+    background-color: whitesmoke;
+    height: 250px;
+}
+
+#socialMedia {
+    display: block;
+    position: relative;
+    float: right;
+    top: 70px;
+    right: 50px;
+}
+
+#socialMedia li {
+    display: inline;
+    margin: 5px;
+}
+
+
+/* form */
+
+
+/* Style the form element with a border around it */
+
+form {
+    position: relative;
+    left: 50px;
+    margin: 10px;
+    width: 50%;
+}
+
+
+/* Add some padding and a grey background color to containers */
+
+.container4 {
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+
+/* Style the input elements and the submit button */
+
+input[type=text],
+input[type=submit] {
+    width: 40%;
+    padding: 12px;
+    display: inline-block;
+    border: 1px solid chocolate;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
+
+/* Style the submit button */
+
+input[type=submit] {
+    background-color: chocolate;
+    color: whitesmoke;
+    border: none;
+    width: 20%;
+    display: inline-block;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+    background-color: whitesmoke;
+}
+
+
+}
+#name {
+    background-color: whitesmoke;
+    border: chocolate solid 1px;
+}
+#email {
+    background-color: whitesmoke;
+    border: chocolate solid 1px;
+}
+#subscribe {
+    font-family: "Dosis", sans-serif;
+    font-size: 22px;
+    color: saddlebrown;
+}
