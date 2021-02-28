@@ -1,0 +1,48 @@
+
+body{
+margin: 40px;
+}
+ .cusiniesSection{
+ width: 200px; 
+  height: 400px; 
+  border: solid black;
+  float: left;
+  padding-top: 50px;
+  margin-top: 50px;
+
+}
+.orderForm{
+ width: 500px; 
+  height:300px; 
+  border: solid black;
+  display: inline-block;
+  padding: 10px;
+
+}
+.newaOrder{width: 500px; 
+  height:200px; 
+  border: solid black;
+  padding: 20px;
+  }
+
+
+.allLabels{
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bolder;
+
+}
+.orderSections{
+  float:right;
+  margin-right: 300px;
+}
+ nav ul li a {
+  text-align: center;
+  text-decoration: none;
+  font-family: cursive;
+  font-weight: bold;
+}
+table th,tr,td {
+  border: solid;
+}
+
+ 
