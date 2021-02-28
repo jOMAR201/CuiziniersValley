@@ -1,67 +1,56 @@
 "use strict";
 
 
-const DishDataArray = function (data) {
-  this.data = data;
-}
 
-DishDataArray.prototype.addNewDish = function(dish) {
-  let countryExist = false;
-  let dishExist = false;
-  for (let i = 0; i < this.data.length; i++) {
-    if (dish.dishCountry == this.data[i].dishCountry) {
-      countryExist = true;
-      for (let index = 0; index < this.data[i].dishes.length; index++) {
-        if (dish.dishName === this.data[i].dishes[index].dishName) {
-          alert("Dish is already exist")
-          dishExist = true;
-          break;
-        }
-      }
-      if (!dishExist) {
-        this.data[i].dishes.push(dish);
-        break;
-      }
-    }
-
-
-  }
-
-  if (!countryExist) {
-    let newCountry = new DishArray(dish.dishCountry);
-    newCountry.dishes.push(dish);
-    this.data.push(newCountry);
-  }
-
-}
-DishDataArray.prototype.addToLocalStorage = function () {
-  localStorage.setItem('dishArrays', JSON.stringify(this.items));
-}
-// creating dishes 
-const DishObject = function (name, country, info, imgPath, ingredients, instructions) {
+const DishObject = function (name, country,type, info, imgPath, ingredients, instructions) {
   this.dishName = name;
   this.dishImage = imgPath;
   this.dishCountry = country;
   this.dishInfo = info;
+  this.dishType = type;
   this.dishIngredients = ingredients;
   this.dishInstructions = instructions;
- DishObject.allDishes.push(this);
+  this.addNewDish();
 }
 DishObject.allDishes = [];
+let previous;
+if (localStorage.getItem('dishesData')) {
+  previous = JSON.parse(localStorage.getItem('dishesData')); 
+}
+for (let i in previous) {
+  DishObject.allDishes.push(previous[i]);
+}
 
-// Array class that holds each country and the dishes it has
-const DishArray = function (countryName) {
-  this.dishCountry = countryName;
-  this.dishes = [];
+DishObject.prototype.addNewDish = function () {
+  if (!this.checkIdDishExists()) {
+    DishObject.allDishes.push(this);
+    this.saveToLocalStorage();
+  } else {
+    console.log("Dish exist");
+  }
+
+}
+
+DishObject.prototype.saveToLocalStorage = function () {
+  localStorage.setItem('dishesData',JSON.stringify(DishObject.allDishes))
+}
+
+DishObject.prototype.checkIdDishExists = function () {
+  for (let dish in DishObject.allDishes) {
+    if (DishObject.allDishes[dish].dishName.toLowerCase() === this.dishName.toLowerCase() && DishObject.allDishes[dish].dishCountry.toLowerCase() === this.dishCountry.toLowerCase()) {
+      return true;
+    }
+  }
+  return false;
 }
 
 
+new DishObject('Mansaf', 'Jordan','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('kabseh', 'Jordan','breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('mjadara', 'Jordan', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Dolma', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 
-let dish = new DishObject('Mansaf', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('kabseh', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('mjadara', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('mjadara', 'Jordan', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('Dolma', 'Iraq', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+console.log('ALL DISHES',DishObject.allDishes);
 
 
 
