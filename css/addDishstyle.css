@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lobster Two', cursive;
+    font-size: xx-large;
+}
+
+#addNewDishForm {
+    text-align: center;
+}
+
+fieldset {
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+input {
+    border: 3px solid rgb(78, 3, 3);
+}
+
+.btn {
+    margin-top: 5%;
+    margin-left: 5%;
+    border: 3px solid rgb(78, 3, 3);
+}
+
+#recipetext {
+    font-size: 60px;
+}
+
+#recipeForm {
+    border-top: rgb(243, 217, 217);
+    margin: 0px;
+}
+
+label {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+#countryNewDish,
+#TypeDish {
+    margin-top: 2%;
+}
