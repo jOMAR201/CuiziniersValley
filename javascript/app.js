@@ -96,7 +96,6 @@ let imagesArray = [
   "003.jpg",
   "004.jpg",
   "005.jpg",
-  "006.jpg",
 ];
 
 setInterval(function () {
