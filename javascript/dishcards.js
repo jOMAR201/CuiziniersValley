@@ -55,6 +55,7 @@ function createCard(dishObject) {
     article.appendChild(p);
 
     let buttonsDiv = document.createElement('div');
+    buttonsDiv.id = dishObject.dishName;
     article.appendChild(buttonsDiv);
 
     let orderButton = document.createElement('button');
@@ -108,6 +109,7 @@ function buttonsClickHandler(e) {
     let targetButton = e.target;
     if (targetButton.classList.contains('orderBtn')) {
         console.log('if inside orderBtn');
+        localStorage.setItem('orderedDish', targetButton.parentElement.id )
         window.location.href = '/pages/order.html';
     }
     else if (targetButton.classList.contains('makeBtn')) {
