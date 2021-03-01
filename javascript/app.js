@@ -45,12 +45,24 @@ DishObject.prototype.checkIdDishExists = function () {
 }
 
 
+new DishObject('Malfof', 'Jordan','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Loma', 'Jordan','breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('MAjdol', 'Jordan', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Dolma', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Mansaf', 'Iraq','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('kabseh', 'Iraq','breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('mjadara', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Dolma', 'Syria', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Mansaf', 'Syria','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('kabseh', 'Syria','breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('mjadara', 'Syria', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Tabboleh', 'Syria', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 new DishObject('Mansaf', 'Jordan','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 new DishObject('kabseh', 'Jordan','breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 new DishObject('mjadara', 'Jordan', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
-new DishObject('Dolma', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Kaboos', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 
-console.log('ALL DISHES',DishObject.allDishes);
+
 
 
 

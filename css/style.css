@@ -349,6 +349,7 @@ main {
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -458,6 +459,7 @@ main {
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -567,11 +569,13 @@ input[type=text] {
     /* border: red solid; */
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover ,input[type=reset]:hover {
     opacity: 0.8;
     color: #34626c;
     margin-top: 0.5%;
     background-color: whitesmoke;
+    color: chocolate;
+
 }
 
 #name,
