@@ -57,8 +57,8 @@ let deleteItem = function(event) {
 
     let ingredientIndex = ingrediantArray.indexOf(IngredaintInputAndQuantity);
     ingrediantArray.splice(ingredientIndex);
-    console.log(ingredientIndex);
-    console.log(ingrediantArray);
+    // console.log(ingredientIndex);
+    // console.log(ingrediantArray);
 
     //Remove the parent list item from the ul
     let ingrediantItem = this.parentNode;
