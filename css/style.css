@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Caveat', cursive;
+    color:brown;
+
 }
 
 html,
@@ -90,7 +92,7 @@ main {
     height: 3px;
     left: 70px;
     /* border:  solid black; */
-    background-color: #34626c;
+    background-color: brown;
     transition: all 0.8s;
 }
 
@@ -138,7 +140,7 @@ main {
 .nav-link {
     text-decoration: none;
     font-size: 22px;
-    color: #34626c;
+    color: brown;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -511,15 +513,23 @@ main {
 
 
 /* footer  */
-
+/* 
 footer {
+ 
+} */
+
+#footerContainer{
+    position: relative;
     border-top: 3px solid #34626c;
-    color: #34626c;
-    height: 150px;
+    color:brown;
+    max-height: 400px;
     margin-top: 2%;
     width: 100%;
-    background-color: #9cada4;
     margin-bottom: 0px;
+    border: solid brown;
+    background-color: #839b97;
+
+
 }
 
 #socialMediabottom {
@@ -549,9 +559,10 @@ input[type=text] {
     border: 1px solid #34626c;
     background-color: whitesmoke;
     box-sizing: border-box;
+    height: 35px;
 }
 
-input[type=submit] {
+/* input[type=submit] {
     background-color: #34626c;
     color: whitesmoke;
     border: none;
@@ -561,6 +572,22 @@ input[type=submit] {
     font-size: 25px;
     margin-left: 150px;
     margin-bottom: 1px;
+} */
+
+
+#submitButton{
+    position: absolute;
+    width: 7%;
+    height: 35px;
+    top: 105px;
+    left: -9px;
+    background-color: brown;
+
+    margin: 10px;
+    color: whitesmoke;
+    font-size: 25px;
+    /* border: red solid; */
+
 }
 
 input[type=submit]:hover {
@@ -575,6 +602,12 @@ input[type=submit]:hover {
     background-color: whitesmoke;
     color: #34626c;
     font-size: 25px;
+}
+
+#LOGOPICButtom{
+    top: 0px;
+    position: absolute;
+    left: 40%;
 }
 
 
@@ -604,17 +637,3 @@ input[type=submit]:hover {
     }
 }
 
-
-/* form */
-
-
-/* Style the form element with a border around it */
-
-
-/* Add some padding and a grey background color to containers */
-
-
-/* Style the input elements and the submit button */
-
-
-/* Style the submit button */
