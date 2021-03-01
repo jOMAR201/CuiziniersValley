@@ -1,13 +1,10 @@
 /* setting the Page */
 
-
-
 * {
     margin: 0;
     padding: 0;
     font-family: 'Caveat', cursive;
 }
-
 
 html,
 body {
@@ -22,17 +19,15 @@ body {
 
 
 /* HEADER */
+
 header {
     background-color: whitesmoke;
-    height:  150px;
+    height: 150px;
     width: 100%;
-
-    margin:  0 0 5px 0 ;
-
-
+    margin: 0 0 5px 0;
 }
 
-#LOGOPIC{
+#LOGOPIC {
     position: relative;
     /* border: solid rgb(26, 211, 125); */
     left: 45%;
@@ -41,6 +36,7 @@ header {
 
 
 /* RANDOM IMAGES */
+
 main {
     background-color: whitesmoke;
     padding: 0;
@@ -57,9 +53,7 @@ main {
     top: 10%;
     transition: all 0.8s;
     z-index: 1;
-
 }
-
 
 #EatwithoutBoundries {
     position: absolute;
@@ -71,7 +65,7 @@ main {
     transform: translate(-50%, -50%);
     color: transparent;
     -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: whitesmoke ;
+    -webkit-text-stroke-color: whitesmoke;
     opacity: 90%;
 }
 
@@ -85,7 +79,6 @@ main {
     position: fixed;
     top: 60px;
     left: 70px;
-    
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -102,9 +95,7 @@ main {
 }
 
 .change .line-1 {
-
     transform: rotateZ(-405deg) translate(-8px, 6px);
-    
 }
 
 .change .line-2 {
@@ -121,9 +112,8 @@ main {
     position: fixed;
     top: 0;
     left: -400px;
-    display:flex;
+    display: flex;
     background-color: #9cada4;
-
     justify-content: center;
     align-items: center;
     /* border-radius: 70% 0 0 70%; */
@@ -158,7 +148,10 @@ main {
 
 
 /* make orage lines */
+
+
 /* upper border */
+
 .nav-link::before {
     content: " ";
     width: 100%;
@@ -172,6 +165,7 @@ main {
 
 
 /* bottom Border  */
+
 .nav-link::after {
     content: " ";
     width: 100%;
@@ -201,13 +195,9 @@ main {
     transform: scaleX(1);
 }
 
-
-
 #firstParagraph {
     position: relative;
-    font-family:'Caveat', cursive;
-    border: red solid;
-
+    font-family: 'Caveat', cursive;
     font-size: 38px;
     margin: auto;
     max-width: 90%;
@@ -225,10 +215,9 @@ main {
     /* border: tomato solid; */
     position: relative;
     margin: auto;
-
 }
 
-.sliderImage{
+.sliderImage {
     width: 1000px;
     height: 450px;
     /* border: red solid; */
@@ -289,18 +278,16 @@ main {
     text-align: center;
     -webkit-text-stroke-width: 2px;
     /* border: blanchedalmond solid; */
+    -webkit-text-stroke-color: #34626c;
+}
 
-    -webkit-text-stroke-color: #34626c ;}
-
-
-.text:hover{
-   color: #383e56;
-   -webkit-text-stroke-width: 2px;
+.text:hover {
+    color: #383e56;
+    -webkit-text-stroke-width: 2px;
     /* border: blanchedalmond solid; */
+    -webkit-text-stroke-color: whitesmoke;
+}
 
-    -webkit-text-stroke-color: whitesmoke ;
-
-}    
 
 /* #text{
     position: absolute;
@@ -315,6 +302,7 @@ main {
     -webkit-text-stroke-color: #34626c ;
 
 } */
+
 
 /* Number text (1/3 etc) */
 
@@ -361,183 +349,108 @@ main {
     }
     to {
         opacity: 1
-  }
-  
-  
+    }
 }
-  
+
 
 /* slider  */
-  
-  /* Slideshow container */
-
-    
-    /* Hide the images by default */
-    .mySlides {
-      display: none;
-    }
-    
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-    
-    /* Caption text */
-   
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-    
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
-    }
-    
-    @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
-    }
-  
-  
-    /* Footer */
-
-    footer{
-        margin: 20px 0 0 0 ;
-        border: springgreen solid;
 
 
-    }
-    #container3{
-        margin: 20px 0 0 0 ;
-        width: 100%;
-        background-color: whitesmoke;
-        height: 250px;
-        
-    }
-  
-    #socialMedia{
-        display: block;
-        position: relative;
-        float: right;
-        top: 70px;
-        right: 50px;
-  
-    }
-  
-    #socialMedia li{
-  display: inline;      
-  margin: 5px;
-  
-  
-    }
-  
-  
-    /* form */
-  
-  
-    /* Style the form element with a border around it */
-  form {
-      position: relative;
-      left: 50px;
-      margin: 10px;
-  
-      width: 50%;
-      
-    }
-    
-    /* Add some padding and a grey background color to containers */
-    .container4 {
-        
-      padding: 20px;
-      background-color: whitesmoke;
-    }
-    
-    /* Style the input elements and the submit button */
-    input[type=text], input[type=submit] {
-      width: 40%;
-      padding: 12px;
-     
-      display: inline-block;
-      border: 1px solid chocolate;
-      background-color: whitesmoke;
-      box-sizing: border-box;
-    }
-    
-  
-    
-    /* Style the submit button */
-    input[type=submit] {
-      background-color: chocolate;
-      color: whitesmoke;
-      border: none;
-      width: 20%;
-      display: inline-block;
-  
-    }
-    
-    input[type=submit]:hover {
-      opacity: 0.8;
-          background-color: whitesmoke;
-  }
-    
-    #name{
-  
-      background-color: whitesmoke;
-      border: chocolate solid 1px;
-    }
+/* Slideshow container */
 
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
 
 @keyframes fade {
     from {
@@ -550,12 +463,6 @@ main {
 
 
 /* Footer */
-
-#container3 {
-    width: 100%;
-    background-color: whitesmoke;
-    height: 250px;
-}
 
 #socialMedia {
     display: block;
@@ -576,65 +483,138 @@ main {
 
 /* Style the form element with a border around it */
 
-form {
+#socialMedia {
+    /* this icones must be in right header  */
+    position: absolute;
+    float: right;
+}
+
+.socialmediaImages {
+    /* this icones must be in the same line with hamburger menu */
+    width: 35px;
+    height: 35px;
+    top: 64px;
+}
+
+#socialMedia {
+    display: block;
+    position: absolute;
+    float: right;
+    top: 65px;
+    right: 50px;
+}
+
+#socialMedia li {
+    display: inline;
+    margin: 5px;
+}
+
+
+/* footer  */
+
+footer {
+    border-top: 3px solid #34626c;
+    color: #34626c;
+    height: 150px;
+    margin-top: 2%;
+    width: 100%;
+    background-color: #9cada4;
+    margin-bottom: 0px;
+}
+
+#socialMediabottom {
+    display: block;
     position: relative;
-    left: 50px;
-    margin: 10px;
-    width: 50%;
+    float: right;
+    right: 50px;
+    top: 60px;
+}
+
+#socialMediabottom li {
+    display: inline;
+    margin: 5px;
+}
+
+form {
+    position: absolute;
+    width: 100%;
+    margin-left: 4%;
+    font-size: 30px;
+}
+
+input[type=text] {
+    width: 15%;
+    padding: 12px;
+    display: inline;
+    border: 1px solid #34626c;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #34626c;
+    color: whitesmoke;
+    border: none;
+    width: 10%;
+    margin-top: 0.5%;
+    padding: 7px;
+    font-size: 25px;
+    margin-left: 150px;
+    margin-bottom: 1px;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+    color: #34626c;
+    margin-top: 0.5%;
+    background-color: whitesmoke;
+}
+
+#name,
+#email {
+    background-color: whitesmoke;
+    color: #34626c;
+    font-size: 25px;
 }
 
 
 /* Add some padding and a grey background color to containers */
 
-.container4 {
-    padding: 20px;
-    background-color: whitesmoke;
-}
-
 
 /* Style the input elements and the submit button */
-
-input[type=text],
-input[type=submit] {
-    width: 40%;
-    padding: 12px;
-    display: inline-block;
-    border: 1px solid chocolate;
-    background-color: whitesmoke;
-    box-sizing: border-box;
-}
 
 
 /* Style the submit button */
 
-input[type=submit] {
-    background-color: chocolate;
-    color: whitesmoke;
-    border: none;
-    width: 20%;
-    display: inline-block;
-}
 
-input[type=submit]:hover {
-    opacity: 0.8;
-    background-color: whitesmoke;
-}
+/* 
 
 
 #name {
     background-color: whitesmoke;
     border: chocolate solid 1px;
-}
-#email {
-    background-color: whitesmoke;
-    border: chocolate solid 1px;
-}
-#subscribe {
-    font-family: "Dosis", sans-serif;
-    font-size: 22px;
-    color: saddlebrown;
+} */
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
-   
+
+/* form */
 
 
+/* Style the form element with a border around it */
+
+
+/* Add some padding and a grey background color to containers */
+
+
+/* Style the input elements and the submit button */
+
+
+/* Style the submit button */
