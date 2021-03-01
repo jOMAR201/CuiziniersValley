@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -10,9 +11,71 @@
 </head>
 
 <body>
+
     <header>
+        <!-- Start Humburger Menue -->
+        <div class="container">
+            <nav class="navbar" id='navbar'>
+
+                <div class="humburger-menu" id="humburger-menu">
+                    <div class='line line-1'></div>
+                    <div class='line line-2'></div>
+                    <div class='line line-3'></div>
+
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">Jordan</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">Syria</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">Turkey</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">Iraq</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">Order</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">suggest a dish</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="" class="nav-link">About us</a>
+                    </li>
+
+                </ul>
+
+
+            </nav>
+            <img id="LOGOPIC" src="../images/23f6962c-0cd4-4ec5-8cde-130ca5d1f8b8_200x200.png">
+
+        </div>
+        <!-- finish humburger -->
         <!-- it will the same from another pages, nav bar and link .. etc  -->
+        <!-- Start right Side  images/23f6962c-0cd4-4ec5-8cde-130ca5d1f8b8_200x200.png-->
+        <!-- finish right side -->
     </header>
+
     <main>
         <!-- add new desh by user, In this form ; user will add desh to the specific country  -->
 
@@ -99,7 +162,7 @@
                     <label for="img">Upload Image:</label>
 
                     <!-- <input type="file" id="myFile" name="filename"> -->
-                    
+
                     <input type="file" id="UploadImage" name="UploadImage" accept="image/*">
                     <input class="btn" type="submit" id='submitButton' value="Finish">
 
@@ -109,7 +172,53 @@
 
     </main>
     <footer>
+
+
+        <div id="footerContainer">
+            <nav>
+
+
+
+                <ul id="socialMedia">
+                    <li>
+                        <a href=""><img src="../images/fb-icon.png" alt="" srcset=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/flic-icon.png" alt="" srcset=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/gp-icon.png" alt="" srcset=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/insta-icon.png" alt="" srcset=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/twit-icon.png" alt="" srcset=""></a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <form action="action_page.php">
+                <p id="subscribe">Subscribe to our Newsletter</p>
+                <p>Lorem ipsum..</p>
+
+                <input id="name" type="text" placeholder="Name" name="name" required>
+                <input id="email" type="text" placeholder="Email address" name="mail" required>
+                <input id="submitButton" type="submit" value="Subscribe">
+                <img id="LOGOPICButtom" src="../images/23f6962c-0cd4-4ec5-8cde-130ca5d1f8b8_200x200.png">
+
+
+            </form>
+
+        </div>
+
+
     </footer>
+
+
     <script src="/javascript/app.js"></script>
 
     <script src="/javascript/addNewDish.js"></script>

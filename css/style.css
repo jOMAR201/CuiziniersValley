@@ -4,8 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Caveat', cursive;
-    color:brown;
-
+    color: brown;
 }
 
 html,
@@ -512,22 +511,17 @@ main {
     margin: 5px;
 }
 
-
-
-
-#footerContainer{
+#footerContainer {
     position: relative;
     padding: 10px;
     border-top: 3px solid #34626c;
-    color:brown;
+    color: brown;
     height: 150px;
     margin-top: 2%;
     width: 100%;
     margin-bottom: 0px;
     border-top: solid brown;
     background-color: #839b97;
-
-
 }
 
 #socialMediabottom {
@@ -560,21 +554,17 @@ input[type=text] {
     height: 35px;
 }
 
-
-
-#submitButton{
+#submitButton {
     position: absolute;
     width: 7%;
     height: 35px;
     top: 105px;
     left: -9px;
     background-color: brown;
-
     margin: 10px;
     color: whitesmoke;
     font-size: 25px;
     /* border: red solid; */
-
 }
 
 input[type=submit]:hover {
@@ -591,18 +581,11 @@ input[type=submit]:hover {
     font-size: 25px;
 }
 
-#LOGOPICButtom{
+#LOGOPICButtom {
     top: -40px;
     position: absolute;
     left: 40%;
 }
-
-
-
-
-
-
-
 
 @keyframes fade {
     from {
@@ -612,4 +595,3 @@ input[type=submit]:hover {
         opacity: 1
     }
 }
-

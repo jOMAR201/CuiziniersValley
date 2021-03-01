@@ -1,50 +1,297 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Lobster Two', cursive;
-    font-size: xx-large;
-}
+        * {
+            box-sizing: border-box;
+            font-family: 'Caveat', cursive;
+            margin: 0;
+            padding: 0;
+        }
+        /* font-family: 'Caveat', cursive; for all  */
+        
+        header {
+            background-color: whitesmoke;
+            height: 150px;
+        }
+        
+        #LOGOPIC {
+            position: absolute;
+            margin-left: 45%;
+            top: -22px;
+        }
+        /* Humburger Menu */
+        
+        .humburger-menu {
+            width: 35px;
+            height: 30px;
+            position: fixed;
+            top: 60px;
+            left: 70px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .line {
+            width: 100%;
+            height: 3px;
+            left: 70px;
+            background-color: brown;
+            transition: all 0.8s;
+        }
+        
+        .change .line-1 {
+            transform: rotateZ(-405deg) translate(-8px, 6px);
+        }
+        
+        .change .line-2 {
+            opacity: 0;
+        }
+        
+        .change .line-3 {
+            transform: rotateZ(405deg) translate(-8px, -6px);
+        }
+        
+        .navbar {
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -400px;
+            display: flex;
+            background-color: #9cada4;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.8s cubic-bezier(0.1, 0.7, 1, 1);
+            z-index: 2;
+        }
+        
+        .change {
+            left: 0;
+        }
+        
+        .nav-list {
+            background-color: #9cada4;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .nav-item {
+            background-color: #9cada4;
+            list-style: none;
+            margin: 25px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            font-size: 22px;
+            color: brown;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 3px 0;
+            position: relative;
+        }
+        /* make orage lines */
+        /* upper border */
+        
+        .nav-link::before {
+            content: " ";
+            width: 100%;
+            height: 2px;
+            background-color: #34626c;
+            position: absolute;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.5s;
+        }
+        /* bottom Border  */
+        
+        .nav-link::after {
+            content: " ";
+            width: 100%;
+            height: 2px;
+            background-color: #34626c;
+            position: absolute;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.5s;
+        }
+        
+        .nav-link::before {
+            top: 0;
+            transform-origin: left;
+        }
+        
+        .nav-link::after {
+            bottom: 0;
+            transform-origin: right;
+        }
+        /* Hover effect on menu */
+        
+        .nav-link:hover::before,
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+        /* Humburger Menu */
+        /* Footer */
+        
+        #footerContainer {
+            position: relative;
+            border-top: 3px solid #34626c;
+            color: brown;
+            max-height: 400px;
+            margin-top: 2%;
+            width: 100%;
+            margin-bottom: 0px;
+            border: solid brown;
+            background-color: #839b97;
+        }
+        
+        #socialMedia {
+            border: 3px solid black;
+            display: block;
+            position: relative;
+            float: right;
+            top: 70px;
+            right: 50px;
+        }
+        
+        #socialMedia li {
+            display: inline;
+            margin: 5px;
+        }
+        /* form */
+        /* 
 
-
-
-/* font-family: 'Caveat', cursive; */
-#addNewDishForm {
-    text-align: center;
-}
-
-fieldset {
-    display: inline-block;
-    align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 20%;
-    margin-bottom: 20%;
-}
-
-input {
-    border: 3px solid rgb(78, 3, 3);
-}
-
-.btn {
-    margin-top: 5%;
-    margin-left: 5%;
-    border: 3px solid rgb(78, 3, 3);
-}
-
-#recipetext {
-    font-size: 60px;
-}
-
-#recipeForm {
-    border-top: rgb(243, 217, 217);
-    margin: 0px;
-}
-
-label {
-    margin-right: 2%;
-    margin-left: 2%;
-}
-
-#countryNewDish,
-#TypeDish {
-    margin-top: 2%;
-}
+/* Style the form element with a border around it */
+        
+        .socialmediaImages {
+            /* this icones must be in the same line with hamburger menu */
+            width: 50px;
+            height: 50px;
+        }
+        /* footer  */
+        
+        #socialMediabottom {
+            display: block;
+            position: relative;
+            float: right;
+            right: 50px;
+            top: 60px;
+        }
+        
+        #socialMediabottom li {
+            display: inline;
+            margin: 5px;
+        }
+        
+        form {
+            position: absolute;
+            width: 100%;
+            margin-left: 4%;
+            font-size: 30px;
+        }
+        
+        input[type=text] {
+            width: 15%;
+            padding: 12px;
+            display: inline;
+            border: 1px solid #34626c;
+            background-color: whitesmoke;
+            box-sizing: border-box;
+            height: 35px;
+        }
+        
+        input[type=submit] {
+            background-color: #34626c;
+            color: whitesmoke;
+            border: none;
+            width: 10%;
+            margin-top: 0.5%;
+            padding: 7px;
+            font-size: 25px;
+            margin-left: 150px;
+            margin-bottom: 1px;
+        }
+        
+        #submitButton {
+            position: absolute;
+            width: 7%;
+            height: 35px;
+            top: 105px;
+            left: -9px;
+            background-color: brown;
+            margin: 10px;
+            color: whitesmoke;
+            font-size: 25px;
+            border: red solid;
+        }
+        
+        input[type=submit]:hover {
+            opacity: 0.8;
+            color: #34626c;
+            margin-top: 0.5%;
+            background-color: whitesmoke;
+        }
+        
+        #name,
+        #email {
+            background-color: whitesmoke;
+            color: #34626c;
+            font-size: 25px;
+        }
+        
+        #LOGOPICButtom {
+            top: 0px;
+            position: absolute;
+            left: 40%;
+        }
+        /* Add some padding and a grey background color to containers */
+        /* Style the input elements and the submit button */
+        /* Style the submit button */
+        
+        #name {
+            background-color: whitesmoke;
+            border: chocolate solid 1px;
+        }
+        
+        */ #addNewDishForm {
+            text-align: center;
+        }
+        
+        fieldset {
+            display: inline-block;
+            align-items: center;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+        
+        input {
+            border: 3px solid rgb(78, 3, 3);
+        }
+        
+        .btn {
+            margin-top: 5%;
+            margin-left: 5%;
+            border: 3px solid rgb(78, 3, 3);
+        }
+        
+        #recipetext {
+            font-size: 60px;
+        }
+        
+        #recipeForm {
+            border-top: rgb(243, 217, 217);
+            margin: 0px;
+        }
+        
+        label {
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+        
+        #countryNewDish,
+        #TypeDish {
+            margin-top: 2%;
+        }
