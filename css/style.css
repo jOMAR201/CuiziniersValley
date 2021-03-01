@@ -202,6 +202,7 @@ main {
     font-family: 'Caveat', cursive;
     font-size: 38px;
     margin: auto;
+    left: 60px;
     max-width: 90%;
     margin: 30px;
 }
@@ -512,21 +513,18 @@ main {
 }
 
 
-/* footer  */
-/* 
-footer {
- 
-} */
+
 
 #footerContainer{
     position: relative;
+    padding: 10px;
     border-top: 3px solid #34626c;
     color:brown;
-    max-height: 400px;
+    height: 150px;
     margin-top: 2%;
     width: 100%;
     margin-bottom: 0px;
-    border: solid brown;
+    border-top: solid brown;
     background-color: #839b97;
 
 
@@ -562,17 +560,6 @@ input[type=text] {
     height: 35px;
 }
 
-/* input[type=submit] {
-    background-color: #34626c;
-    color: whitesmoke;
-    border: none;
-    width: 10%;
-    margin-top: 0.5%;
-    padding: 7px;
-    font-size: 25px;
-    margin-left: 150px;
-    margin-bottom: 1px;
-} */
 
 
 #submitButton{
@@ -605,28 +592,17 @@ input[type=submit]:hover {
 }
 
 #LOGOPICButtom{
-    top: 0px;
+    top: -40px;
     position: absolute;
     left: 40%;
 }
 
 
-/* Add some padding and a grey background color to containers */
 
 
-/* Style the input elements and the submit button */
 
 
-/* Style the submit button */
 
-
-/* 
-
-
-#name {
-    background-color: whitesmoke;
-    border: chocolate solid 1px;
-} */
 
 @keyframes fade {
     from {
