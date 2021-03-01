@@ -356,8 +356,10 @@ main {
   }
   
   
+}
   
-  /* slider  */
+
+/* slider  */
   
   /* Slideshow container */
   .slideshow-container {
@@ -532,7 +534,7 @@ main {
       background-color: whitesmoke;
       border: chocolate solid 1px;
     }
-}
+
 
 @keyframes fade {
     from {
