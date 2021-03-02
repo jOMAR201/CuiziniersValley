@@ -293,6 +293,7 @@ function renderOrders() {
         let delTD = document.createElement('td');
         // delTD.innerHTML = '<button>X</button>';
         let delTDBtn = document.createElement('button');
+        delTDBtn.id='delTDBtn';
         delTDBtn.textContent = 'X';
         delTD.appendChild(delTDBtn);
         delTDBtn.addEventListener('click', handleDeleteBtn);
