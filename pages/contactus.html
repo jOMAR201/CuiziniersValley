@@ -87,9 +87,9 @@
         
         
 
-        <div class="container2">
+        <div id="container2">
             <h1>Git in Touch</h1>
-          <form action="">
+          <form onsubmit="return results();">
             <label for="fname"><h3>Full Name</h3></label>
             <input type="text" id="fname" name="fullname" placeholder="Your full name..">
         
@@ -102,9 +102,9 @@
             <label for="subject"><h3>Subject</h3></label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
         
-            <input type="submit" value="Submit">
+            <input  type="submit" value="submit">
            
-            <input type="submit" value="Clear">
+            
           
           
             </form>
@@ -115,11 +115,12 @@
     </header>
     <main>
         <div class="Paragraph">
-            <a href="#">Follow us on Face book</a> <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg "width="150px"height="150px" alt="">
+            <a href="#"><p>Follow us on Face book</p></a> <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg "width="150px"height="150px" alt="">
             <br>
-             <a href="#">Follow us on Twitter</a>  <img src="https://i0.wp.com/cdn2.business2community.com/wp-content/uploads/2014/11/543c477e9547e.jpg.jpg"width="150px"height="150px" alt="">
+             <a href="#"><p>Follow us on Twitter</p> </a>  <img src="https://i0.wp.com/cdn2.business2community.com/wp-content/uploads/2014/11/543c477e9547e.jpg.jpg"width="150px"height="150px" alt="">
              <br>
-             <a href="#">Follow us on Instagram</a> <img src="https://parentzone.org.uk/sites/default/files/Instagram%20logo.jpg"width="150px"height="150px" alt="">
+             <a href="#"><p>Follow us on Instagram</p> </a> <img src="https://parentzone.org.uk/sites/default/files/Instagram%20logo.jpg"width="150px"height="150px" alt="">
+             </div>
 
 
     </main>
@@ -161,7 +162,10 @@
 
 
     </footer>
-    
+    <script src="/javascript/app.js"></script>
+    <script src="/javascript/form.js"></script>
 </body>
-<script src="/javascript/app.js"></script>
+
+
+
 </html>
