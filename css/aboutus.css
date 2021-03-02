@@ -33,9 +33,9 @@
     background: #fff;
     margin: 5px;
     margin-bottom: 50px;
-    width: 300px;
-    padding: 20px;
-    line-height: 20px;
+    width: 400px;
+    padding: 30px;
+    line-height: 30px;
     color: #8e8b8b;  
     position: relative;
   }
@@ -47,10 +47,26 @@
   }
   
   .team .team_member p.role{
-    color: #ccc;
+    color: rgb(134, 162, 212);
     margin: 12px 0;
     font-size: 12px;
+    font-weight: bolder;
+    animation: mover 3s linear infinite;
     
+  }
+  .team .team_member p{
+    font-style: italic;  }
+  @keyframes mover{
+    0%{
+      text-shadow: 0 0 30px rgba(0,0,0,0);
+    }
+    50%{
+      text-shadow: 0 0 30px rgba(0,0,0,0.30);
+      transform: translateX(20px);
+    }
+    100% {
+      text-shadow: 0 0 30px rgba(0,0,0,0);
+    }
   }
   
   .team .team_member .team_img{
@@ -70,4 +86,12 @@
     padding: 5px;
     border-radius: 50%;
   }
-  
+  .myDiv {
+    font-size: 20px;
+    border: 5px outset rgb(206, 97, 188);
+    background-color: lightblue;    
+    text-align: center;
+    margin-top: 200px;
+    height: 170px;
+    font-family:Copperplate, Papyrus, fantasy;
+  }
