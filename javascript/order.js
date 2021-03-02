@@ -106,13 +106,29 @@ function OrderObject(dishOrdered, dishQuantity, sideOrdered, sideQuantity, drink
     this.restOrder = restOrder;
     this.cusNum = cusNum;
     this.cusAddress = cusAddress;
-    OrderObject.allOrders.push(this);
+    this.deleveryPrice = 2;
+    this.totalPrice = this.calculatePrice();
     this.saveToLocalStorage();
 }
 OrderObject.allOrders = [];
 
+OrderObject.prototype.calculatePrice = function () {
+    let price = 0;
+    price = (this.dishQuantity * 5) + (this.sideQuantity * 2.5) + (this.drinkQuantity * 1) + this.deleveryPrice;
+    return price;
+}
+
 OrderObject.prototype.saveToLocalStorage = function () {
+    if (localStorage.getItem('orders')) {
+        OrderObject.allOrders = [];
+        let prevData = JSON.parse(localStorage.getItem('orders'));
+        for (let order in prevData) {
+            OrderObject.allOrders.push(prevData[order]);
+        }
+    }
+    OrderObject.allOrders.push(this);
     localStorage.setItem('orders',JSON.stringify(OrderObject.allOrders));
+
 }
 // renderDrinksSidesMains();
 function renderDrinksSides(rest) {
@@ -234,14 +250,18 @@ function handleReset(e) {
 }
 let form = document.getElementById('restaurntOrder');
 form.addEventListener('submit', submitHandler);
+
+renderOrders();
 function submitHandler(e) {
+    e.preventDefault();
     createOrdreObject();
-    
+    renderOrders();   
 }
 function createOrdreObject() {
     let orderedDish = document.getElementById('mainDish').value;
     let orderedDishQuantity = document.getElementById('quantityMain').value;
-    let orderedSide = document.etElementById('sideDish').value;
+    // parentTable.innerHTML = '';d('quantityMain').value;
+    let orderedSide = document.getElementById('sideDish').value;
     let orderedSideQuantity = document.getElementById('quantitySide').value;
     let orderedDrink = document.getElementById('drink').value;
     let orderedDrinkQuantity = document.getElementById('quantityDrink').value;
@@ -251,34 +271,63 @@ function createOrdreObject() {
     new OrderObject(orderedDish, orderedDishQuantity, orderedSide, orderedSideQuantity, orderedDrink, orderedDrinkQuantity, orderedRest, customerPhoneNum, customerAddress);
 }
 
+function handleDeleteBtn(event) {
+    let target = event.target.parentElement.parentElement;
+    let indToDelete = target.id;
+    let arr = JSON.parse(localStorage.getItem('orders'));
+    arr.pop(indToDelete);
+    localStorage.setItem('orders', JSON.stringify(arr));
+    renderOrders();
+    // console.log(arr);
+}
+
 function renderOrders() {
-    let ordersData = JSON.parse(localStorage.getItem('orders'));
+    let orderData = JSON.parse(localStorage.getItem('orders'));
     let parentTable = document.getElementById('tbody');
-    for (let order in ordersData) {
+    parentTable.innerHTML = '';
+    for (let order in orderData) {
         let orderRow = document.createElement('tr');
+        orderRow.id = order;
         parentTable.appendChild(orderRow);
 
         let delTD = document.createElement('td');
-        delTD.innerHTML = '<button>X</button>';
+        // delTD.innerHTML = '<button>X</button>';
+        let delTDBtn = document.createElement('button');
+        delTDBtn.textContent = 'X';
+        delTD.appendChild(delTDBtn);
+        delTDBtn.addEventListener('click', handleDeleteBtn);
         orderRow.appendChild(delTD);
 
         let dishQTD = document.createElement('td');
-        dishQTD.textContent = orderData[order].orderedDishQuantity;
+        dishQTD.textContent = orderData[order].dishQuantity;
         orderRow.appendChild(dishQTD);
 
         let dishTD = document.createElement('td');
-        dishQTD.textContent = orderData[order].orderedDish;
-        orderRow.appendChild(dishTDD);
+        dishTD.textContent = orderData[order].dishOrdered;
+        orderRow.appendChild(dishTD);
 
         let sideQTD = document.createElement('td');
-        sideQTD.textContent = orderData[order].orderedSide;
+        sideQTD.textContent = orderData[order].sideQuantity;
         orderRow.appendChild(sideQTD);
 
         let sideTD = document.createElement('td');
-        sideTD.textContent = orderData[order].orderedSide;
+        sideTD.textContent = orderData[order].sideOrdered;
         orderRow.appendChild(sideTD);
 
         let drinkQTD = document.createElement('td');
-        // drinkQTD.textContent = orderData[order].
+        drinkQTD.textContent = orderData[order].drinkQuantity;
+        orderRow.appendChild(drinkQTD);
+
+        let drinkTD = document.createElement('td');
+        drinkTD.textContent = orderData[order].drinkOrdered;
+        orderRow.appendChild(drinkTD);
+
+        let restaurantTD = document.createElement('td');
+        restaurantTD.textContent = orderData[order].restOrder;
+        orderRow.appendChild(restaurantTD);
+
+        let priceTD = document.createElement('td');
+        priceTD.textContent = orderData[order].totalPrice + 'JDs';
+        orderRow.appendChild(priceTD);
     }
 }
