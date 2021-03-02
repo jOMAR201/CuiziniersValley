@@ -22,12 +22,14 @@ function createCard(dishObject) {
     let parentSection = document.getElementById(dishObject.dishCountry);
     let parentDiv = document.createElement('div');
     parentDiv.style.position = 'relative';
+    parentDiv.classList.add('cardDiv');
     parentDiv.style.perspective = '1000px';
-    parentDiv.style.width = '100%';
-    parentDiv.style.height = '30vh';
+    // parentDiv.style.width = '100%';
+    // parentDiv.style.height = '30vh';
     parentSection.appendChild(parentDiv);
 
     let article = document.createElement('article');
+    article.classList.add('cardFace')
     article.style.position = 'absolute';
     article.style.transformStyle = 'preserve-3d';
     article.style.backfaceVisibility = 'hidden';
@@ -39,22 +41,34 @@ function createCard(dishObject) {
     recipeDiv.style.perspective = '1000px';
     recipeDiv.style.backfaceVisibility = 'hidden';
     recipeDiv.style.transformStyle = 'preserve-3d';
-    recipeDiv.style.transform = ('rotateY(180deg)');
+    recipeDiv.style.transform = ('rotateX(180deg)');
     parentDiv.appendChild(recipeDiv);
 
-    let dishName = document.createElement('h3');
-    dishName.textContent = dishObject.dishName;
-    article.appendChild(dishName);
-
-    let img = document.createElement('img');
-    img.src = dishObject.dishImage;
+    let img = document.createElement('div');
+    img.classList.add('cardImgs');
+    img.style.backgroundImage = `url(${dishObject.dishImage})`;
     article.append(img);
+
+    let infoElements = document.createElement('div');
+    infoElements.classList.add('info');
+    article.appendChild(infoElements);
+
+    let dishName = document.createElement('h2');
+    dishName.textContent = dishObject.dishName;
+    infoElements.appendChild(dishName);
+
+    let dishCountry = document.createElement('h4');
+    dishCountry.textContent = dishObject.dishCountry;
+    infoElements.appendChild(dishCountry);
+
+    
 
     let p = document.createElement('p');
     p.textContent = dishObject.dishInfo;
-    article.appendChild(p);
+    infoElements.appendChild(p);
 
     let buttonsDiv = document.createElement('div');
+    buttonsDiv.classList.add('btnDivs');
     buttonsDiv.id = dishObject.dishName;
     article.appendChild(buttonsDiv);
 
@@ -70,11 +84,11 @@ function createCard(dishObject) {
     buttonsDiv.appendChild(makeButton);
     makeButton.addEventListener('click', buttonsClickHandler);
 
-    let moreInfoButton = document.createElement('button');
-    moreInfoButton.textContent = `More Info About ${dishObject.dishName}`;
-    moreInfoButton.classList.add('infoBtn');
-    buttonsDiv.appendChild(moreInfoButton);
-    moreInfoButton.addEventListener('click', buttonsClickHandler);
+    // let moreInfoButton = document.createElement('button');
+    // moreInfoButton.textContent = `More Info About ${dishObject.dishName}`;
+    // moreInfoButton.classList.add('infoBtn');
+    // buttonsDiv.appendChild(moreInfoButton);
+    // moreInfoButton.addEventListener('click', buttonsClickHandler);
 }
 
 function createRecipeDiv(dishObject) {
@@ -115,16 +129,16 @@ function buttonsClickHandler(e) {
     else if (targetButton.classList.contains('makeBtn')) {
         let parentSection = targetButton.parentElement.parentElement.parentElement;
         // console.log(parentSection);
-        parentSection.firstChild.style.transform = 'rotateY(180deg)'
+        parentSection.firstChild.style.transform = 'rotateX(180deg)'
         parentSection.firstChild.style.transition = 'transform 2s'
-        parentSection.lastChild.style.transform = 'rotateY(360deg)'
+        parentSection.lastChild.style.transform = 'rotateX(360deg)'
         parentSection.lastChild.style.transition = 'transform 2s'
         // parentSection.style.transform = 'rotateY(180deg)';
     } else if (targetButton.classList.contains('back')) {
         let parentSection = targetButton.parentElement.parentElement;
-        parentSection.firstChild.style.transform = 'rotateY(0deg)';
+        parentSection.firstChild.style.transform = 'rotateX(0deg)';
         parentSection.firstChild.style.transition = 'transform 2s';
-        parentSection.lastChild.style.transform = 'rotateY(180deg)';
+        parentSection.lastChild.style.transform = 'rotateX(180deg)';
         parentSection.lastChild.style.transition = 'transform 2s';
     }
 }

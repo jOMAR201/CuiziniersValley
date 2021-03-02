@@ -1,5 +1,8 @@
 /* setting the Page */
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -197,9 +200,8 @@ main {
 }
 
 #firstParagraph {
+    text-align: center;
     position: relative;
-    font-family: 'Caveat', cursive;
-    font-size: 38px;
     margin: auto;
     left: 60px;
     max-width: 90%;
@@ -349,7 +351,6 @@ main {
     from {
         opacity: .4
     }
-
     to {
         opacity: 1
     }
@@ -459,7 +460,6 @@ main {
     from {
         opacity: .4
     }
-
     to {
         opacity: 1
     }
@@ -569,13 +569,13 @@ input[type=text] {
     /* border: red solid; */
 }
 
-input[type=submit]:hover ,input[type=reset]:hover {
+input[type=submit]:hover,
+input[type=reset]:hover {
     opacity: 0.8;
     color: #34626c;
     margin-top: 0.5%;
     background-color: whitesmoke;
     color: chocolate;
-
 }
 
 #name,
@@ -598,4 +598,23 @@ input[type=submit]:hover ,input[type=reset]:hover {
     to {
         opacity: 1
     }
+}
+
+p {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    line-height: 2.5rem;
+}
+
+h1,
+h2 {
+    font-family: 'Seymour One', sans-serif;
+    line-height: 3rem;
+}
+
+h3,
+h4 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 2rem;
 }
