@@ -101,55 +101,73 @@
 
   <main>
 
+    <div id="MainArea">
+
 
 
     <section class="orderForm">
-      <form id="restaurntOrder">
+      <form id="restaurntOrder" >
         <fieldset>
           <label>
             <span class="allLabels">Main dish</span>
             <select id="mainDish" required></select>
           </label>
+          <br>
+
 
           <label>
             <span class="allLabels">Restaurant</span>
             <select id="restaurant" required>restaurant</select>
+            <br>
           </label>
 
           <label>
             <span class="allLabels"> Add</span>
             <input id="quantityMain" type="number" value="1" required />
+            <br>
           </label>
 
           <label>
             <span class="allLabels">Side dish</span>
             <select id="sideDish" required></select>
           </label>
+          <br>
+
           <label>
             <span class="allLabels"> Add</span>
             <input id="quantitySide" type="number" value="0"  required />
           </label>
+          <br>
+
 
           <label>
             <span class="allLabels">Drinks</span>
             <select id="drink" required></select>
           </label>
+          <br>
+
           <label>
             <span class="allLabels"> Add</span>
             <input id="quantityDrink" type="number" value="0" required />
           </label>
+          <br>
+
           
           <label>
             <span class="allLabels">Phone number</span>
             <input type="tel" id="phoneNumber" value="07" required>
           </label>
+          <br>
+
 
           <label>
-            <span class="allLabels">Address</span>
+            <span id="addressWord" class="allLabels">Address</span>
             <textarea name="address" id="address" cols="30" rows="5" required></textarea> 
           </label>
+          <br>
 
-          <input type="submit" value="Place Yor Order" id="submit" />
+
+          <input type="submit" value="Place Your Order" id="submit" />
           <input type="reset" value="Reset All Fields" id="reset">
         </fieldset>
       </form>
@@ -176,47 +194,9 @@
         </table>
       </div>
     </section>
-
+  </div>
 
   </main>
-  <footer>
-    <div id="container3">
-      <nav>
-
-
-        <ul id="socialMedia">
-          <li><a href="w"><img src="images/fb-icon.png" alt="" srcset=""></a></li>
-          <li><a href=""><img src="images/flic-icon.png" alt="" srcset=""></a></li>
-          <li><a href=""><img src="images/gp-icon.png" alt="" srcset=""></a></li>
-          <li><a href=""><img src="images/insta-icon.png" alt="" srcset=""></a></li>
-          <li><a href=""><img src="images/twit-icon.png" alt="" srcset=""></a></li>
-
-        </ul>
-
-      </nav>
-
-
-      <form action="action_page.php">
-        <div class="container">
-          <p id="subscribe">Subscribe to our Newsletter</p>
-          <p>Lorem ipsum..</p>
-        </div>
-
-        <div id="emailcontainer" class="container5">
-          <input id="name" type="text" placeholder="Name" name="name" required>
-          <input id="email" type="text" placeholder="Email address" name="mail" required>
-
-        </div>
-
-        <div class="container4">
-          <input type="submit" value="Subscribe">
-        </div>
-      </form>
-
-    </div>
-
-
-  </footer>
 
 
 

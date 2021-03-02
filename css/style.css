@@ -47,7 +47,7 @@ main {
 
 #header2 {
     position: relative;
-    min-height: 70vh;
+   height: 70vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
