@@ -1,28 +1,178 @@
-header{
-    min-height:20vh;
-    height:fit-content !important;
+
+
+
+*{
+    padding:0;
+    margin:0;
 }
 
-main article{
+
+h4 {
+    font-size: smaller;
+}
+
+.backgroundImg {
+    height: 100vh;
     width: 100%;
+    background: url(/images/asian-food-background-various-ingredients-rustic-stone-top-view-vietnam-thai-cuisine-148762904.jpg);
+    display: absolute;
+    position: fixed;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -5;
+
+}
+
+.cuisineSection {
+    background: transparent;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+}
+
+.cardDiv * {
+    color: #FFFFFF;
+
+}
+
+.cardDiv {
+
+    width: 80%;
+    min-height: 35vh;
+    /* filter: blur(1px); */
+    opacity: .9;
+
+    height: fit-content;
+    margin: 3rem auto;
+    background-color: #202327ad;
+    transform: translateX(5rem) perspective(1500px) rotateY(7deg);
+    border-radius: 1rem;
+    border: 0.5rem inset rgba(255, 255, 255, 0.445);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+
+}
+
+.cardDiv:hover {
+    /* filter: blur(0); */
+    opacity: 1;
+    transform: perspective(3000px) rotateY(0deg);
+}
+
+
+main article {
+
+    width: 98%;
+
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-main div{
-    display: flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-}
-main div div{
-    flex-direction:row;
-        justify-content:center;
 
-    justify-content:center;
+article .cardImgs {
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    min-width: 40%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    transform: skewX(-10deg) translateX(-10%);
+    height: 100%;
+    width: 40% !important;
 }
-.recipe{
+
+.btnDivs {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.btnDivs button {
+    margin: 1rem 0;
+    background: #2b3c4f;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: 'Montserrat Alternates';
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 5px 20px;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.btnDivs button:hover {
+    transform: scale(1.1);
+    border: solid #222529 1px;
+    background: #1e62d060;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.orderBtn {
+    background-color: #34626c !important;
+}
+
+.orderBtn:hover {
+    background-color: rgba(52, 98, 108, 0.651) !important;
+}
+
+.recipe {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+
+}
+
+.recipe:nth-child(n) {
+    padding: 1rem;
+}
+
+.recipe ul {
+    transform: translateX(2rem);
+}
+
+.recipe button {
+    height: fit-content;
+    align-self: flex-end;
+    width: 120px;
+    height: 70px;
+    border-radius: 20px;
+    background: #3380ed93;
+    font-family: 'Montserrat Alternates';
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 5px 20px;
+    box-shadow: 1px 1px 20px 0 #5f5e5e;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: .8s;
+}
+.recipe button:hover{
+        background: #7db2fc93;
+
 }

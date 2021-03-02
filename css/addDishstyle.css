@@ -1,12 +1,178 @@
 * {
     box-sizing: border-box;
-    font-family: 'Lobster Two', cursive;
-    font-size: xx-large;
+    font-family: 'Caveat', cursive;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Humburger Menu */
+
+.humburger-menu {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 60px;
+    left: 70px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    left: 70px;
+    background-color: brown;
+    transition: all 0.8s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.navbar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -400px;
+    display: flex;
+    background-color: #9cada4;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.8s cubic-bezier(0.1, 0.7, 1, 1);
+    z-index: 2;
+}
+
+.change {
+    left: 0;
+}
+
+.nav-list {
+    background-color: #9cada4;
+    text-align: left;
+    display: inline-block;
+}
+
+.nav-item {
+    background-color: #9cada4;
+    list-style: none;
+    margin: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 22px;
+    color: brown;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 0;
+    position: relative;
+}
+
+
+/* make orage lines */
+
+
+/* upper border */
+
+.nav-link::before {
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: #34626c;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+
+/* bottom Border  */
+
+.nav-link::after {
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: #34626c;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+
+/* Hover effect on menu */
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* End Humburger Menu */
+
+
+/* font-family: 'Caveat', cursive; for all , will change it   */
+
+
+/* header with height and logo in center */
+
+header {
+    background-color: whitesmoke;
+    height: 150px;
+    position: relative;
+}
+
+
+/*put logo in center */
+
+#LOGOPIC {
+    display: block;
+    margin-left: 45%;
+    margin-right: auto;
+    position: absolute;
+    top: -20px;
 }
 
 
 
-/* font-family: 'Caveat', cursive; */
+
+
+/* Add some padding and a grey background color to containers */
+
+
+/* Style the input elements and the submit button */
+
+
+/* Style the submit button */
+
+#name {
+    background-color: whitesmoke;
+    border: chocolate solid 1px;
+}
+
 #addNewDishForm {
     text-align: center;
 }
@@ -48,3 +214,12 @@ label {
 #TypeDish {
     margin-top: 2%;
 }
+
+
+
+
+
+
+
+
+

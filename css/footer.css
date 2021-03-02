@@ -1,0 +1,163 @@
+/* Footer */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+#footer {
+    z-index: 10;
+    color: #34626c;
+    margin-top: 2rem;
+    min-height: 50vh;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    height: fit-content;
+    width: 100%;
+    background: #f2f2f2cb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+#LOGOPICButtom{
+    margin-right: 7rem;
+}
+
+#bottomForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    border: 0.5rem rgba(255, 255, 255, 0.445);
+    border-style: groove;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    width: 35%;
+    min-width: fit-content;
+    font-size: 25px;
+    color: #34626c;
+    min-height: fit-content;
+    height: 60%;
+    animation: hover infinite;
+    animation-timing-function: linear;
+
+}
+
+#bottomForm:hover {
+    animation: hov 3s infinite;
+}
+
+
+@keyframes hov {
+    0% {
+
+        transform: perspective(1500px) rotateY(15deg);
+    }
+
+    50% {
+        transform: rotateY(-15deg) perspective(0px);
+    }
+
+    100% {
+        transform: perspective(1500px) rotateY(15deg);
+    }
+}
+
+#bottomForm input[type=submit]:hover {
+    opacity: 0.9;
+    color: whitesmoke;
+    background-color: #34626c;
+    transform: scale(1.1);
+}
+
+#bottomForm input[type=text] {
+    width: 75%;
+    padding: 0.5rem;
+    display: inline-block;
+    border: 1px solid #34626c;
+    background-color: whitesmoke;
+    text-align: start;
+    color: #34626c;
+    height: 30px;
+    margin-right: 1%;
+    margin-bottom: 2%;
+}
+
+#submitButton {
+
+
+    box-shadow: 2px 4px 20px 0 #000000;
+    text-shadow: 6px 8px 29px #000000;
+    border: outset #4c6c74b9 2px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #34626c;
+    width: 40.5%;
+    font-size: 23px;
+    width: 50%;
+    display: inline-block;
+    border: 1px solid whitesmoke;
+    text-align: start;
+    color: whitesmoke;
+    border-radius: 20px;
+    height: 40px;
+    text-align: center;
+    align-self: center;
+    transition:0.5s;
+}
+
+div.socialMedia {
+    display: flex;
+    flex-basis: 228px;
+    min-height: 25vh;
+    width: 20%;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.socialMedia p {
+    font-size: 2rem;
+}
+
+#footer nav {
+    height: fit-content;
+}
+
+#footer nav ul {
+    height: fit-content;
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#footer nav ul li {
+    font-size: 3.5rem;
+    line-height: 1px;
+    word-spacing: 1px;
+    padding: 2rem;
+}
+
+p {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    line-height: 2.5rem;
+}
+
+h1,
+h2 {
+    font-family: 'Seymour One', sans-serif;
+    line-height: 3rem;
+}
+
+h3,
+h4 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 2rem;
+}
