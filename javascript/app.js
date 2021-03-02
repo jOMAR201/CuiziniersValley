@@ -45,7 +45,7 @@ DishObject.prototype.checkIdDishExists = function () {
 }
 
 
-new DishObject('Malfof', 'Jordan','Lunch', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
+new DishObject('Malfof', 'Jordan', 'Lunch', 'This dish is good', 'https://img.theculturetrip.com/450x/smart/wp-content/uploads/2018/04/crabs.jpg', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 new DishObject('Loma', 'Jordan','breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 new DishObject('MAjdol', 'Jordan', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
 new DishObject('Dolma', 'Iraq', 'breackfast', 'This dish is good', 'this is the path', ['youg', 'rice', 'meat'], ['do this', 'thin this']);
