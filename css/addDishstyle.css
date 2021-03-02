@@ -157,117 +157,7 @@ header {
 }
 
 
-/* Footer */
 
-#footer {
-    position: relative;
-    color: #34626c;
-    margin-top: 2%;
-    width: 100%;
-    background-color: #f2f2f2;
-}
-
-#LOGOPICButtom {
-    position: relative;
-    display: inline-block;
-    bottom: 35px;
-}
-
-
-/*this items is fonts*/
-
-#socialMedia {
-    display: block;
-    position: relative;
-    float: right;
-    top: 50px;
-    right: 0px;
-    width: 15%;
-    height: 70px;
-}
-
-#socialMedia li {
-    display: inline;
-    margin: 5px;
-    font-size: 50px;
-    color: whitesmoke;
-    padding: 30px;
-}
-
-#socialMedia li i {
-    display: inline;
-    color: #34626c;
-}
-
-#cuntactUs {
-    /* border: black 3px solid; */
-    position: absolute;
-    font-size: 35px;
-    top: 90px;
-    right: 18%;
-    border-bottom: #34626c 3px solid;
-}
-
-
-/* this style for bottom form  */
-
-#bottomForm {
-    /* position: relative; */
-    padding-top: 10px;
-    width: 40.5%;
-    margin-left: 5%;
-    font-size: 25px;
-    color: #34626c;
-    height: 100%;
-}
-
-#bottomForm input[type=submit]:hover {
-    opacity: 0.5;
-    color: whitesmoke;
-    /* margin-top: 0.5%; */
-    background-color: #34626c;
-}
-
-#bottomForm input[type=text] {
-    width: 50%;
-    display: inline;
-    border: 1px solid #34626c;
-    background-color: whitesmoke;
-    text-align: start;
-    color: #34626c;
-    height: 50px;
-    margin-right: 1%;
-    margin-bottom: 2%;
-}
-
-#submitButton {
-    background-color: #34626c;
-    width: 40.5%;
-    font-size: 23px;
-    width: 50%;
-    display: inline;
-    border: 1px solid whitesmoke;
-    text-align: start;
-    color: whitesmoke;
-    margin-right: 1%;
-    margin-bottom: 2%;
-    height: 50px;
-    top: 77px;
-    text-align: center;
-}
-
-#name,
-#email {
-    background-color: whitesmoke;
-    color: #34626c;
-    font-size: 25px;
-}
-
-#LOGOPICButtom {
-    top: 0px;
-    position: absolute;
-    left: 45%;
-}
 
 
 /* Add some padding and a grey background color to containers */
@@ -325,6 +215,11 @@ label {
     margin-top: 2%;
 }
 
-#fot-pic {
-    /* text-align: center; */
-}
+
+
+
+
+
+
+
+
