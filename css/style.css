@@ -1,15 +1,13 @@
 /* setting the Page */
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
     font-family: 'Caveat', cursive;
-    color:brown;
-
+    color: brown;
 }
 
 html,
@@ -353,7 +351,6 @@ main {
     from {
         opacity: .4
     }
-
     to {
         opacity: 1
     }
@@ -463,7 +460,6 @@ main {
     from {
         opacity: .4
     }
-
     to {
         opacity: 1
     }
@@ -517,22 +513,17 @@ main {
     margin: 5px;
 }
 
-
-
-
-#footerContainer{
+#footerContainer {
     position: relative;
     padding: 10px;
     border-top: 3px solid #34626c;
-    color:brown;
+    color: brown;
     height: 150px;
     margin-top: 2%;
     width: 100%;
     margin-bottom: 0px;
     border-top: solid brown;
     background-color: #839b97;
-
-
 }
 
 #socialMediabottom {
@@ -565,30 +556,26 @@ input[type=text] {
     height: 35px;
 }
 
-
-
-#submitButton{
+#submitButton {
     position: absolute;
     width: 7%;
     height: 35px;
     top: 105px;
     left: -9px;
     background-color: brown;
-
     margin: 10px;
     color: whitesmoke;
     font-size: 25px;
     /* border: red solid; */
-
 }
 
-input[type=submit]:hover ,input[type=reset]:hover {
+input[type=submit]:hover,
+input[type=reset]:hover {
     opacity: 0.8;
     color: #34626c;
     margin-top: 0.5%;
     background-color: whitesmoke;
     color: chocolate;
-
 }
 
 #name,
@@ -598,18 +585,11 @@ input[type=submit]:hover ,input[type=reset]:hover {
     font-size: 25px;
 }
 
-#LOGOPICButtom{
+#LOGOPICButtom {
     top: -40px;
     position: absolute;
     left: 40%;
 }
-
-
-
-
-
-
-
 
 @keyframes fade {
     from {
@@ -620,26 +600,21 @@ input[type=submit]:hover ,input[type=reset]:hover {
     }
 }
 
-
 p {
     font-family: 'Cinzel', serif;
     font-size: 1.2rem;
-
     font-weight: bolder;
     line-height: 2.5rem;
 }
 
-
-
 h1,
 h2 {
     font-family: 'Seymour One', sans-serif;
-    line-height:3rem;
+    line-height: 3rem;
 }
 
 h3,
 h4 {
     font-family: 'Montserrat Alternates', sans-serif;
-        line-height:2rem;
-
+    line-height: 2rem;
 }
