@@ -18,8 +18,11 @@ body{
   background-image: url(/images/salad-2068220.jpg);
   background: cover ;
   background-repeat: no-repeat;
-  z-index: 4;
   min-height: 100vh;
+  
+}
+#backGroundImg{
+
 }
 
 #MainArea{
@@ -36,7 +39,7 @@ header {
   height: fit-content !important;
 }
 form{
-  z-index: 1;
+  /* z-index: 1; */
   border: hidden;
   width: 80%;
   /* height: 150%; */
@@ -156,7 +159,7 @@ color: blanchedalmond;}
 
 
 #submit{
-  position: relative;
+  /* position: relative; */
   left: 230px;
   margin: 0 0 75 450px;
   width: 200px;
@@ -178,19 +181,42 @@ color: blanchedalmond;}
   text-align: center;
   transition: 0.6s;
 }
+
+
 #reset{
   margin: 0 0 75 650px;
-  position: relative;
+  /* position: relative; */
   left: 230px;
   width: 200px;
   height: 50px;
-}
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 5px 20px;
+  box-shadow: 1px 1px 20px 0 #000000;
+  text-shadow: 1px 1px 20px #000000;
+  border: solid #82abe6 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.6s;
+  background: #ff9900;
+  border-radius: 20px;
+  color: #FFFFFF;
 }
 
-#submit:hover {
+
+#submit:hover, #reset:hover {
   transform: scale(1.1);
   border: solid #222529 1px;
   background: #1e62d060;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#reset:hover {
+  transform: scale(1.1);
+  border: solid #67707c 1px;
+  background: #d0981e60;
   border-radius: 20px;
   text-decoration: none;
 }
