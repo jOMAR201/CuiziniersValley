@@ -7,82 +7,82 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="../css/addDishstyle.css">
+    <link rel="stylesheet" href="/css/addDishstyle.css">
 </head>
 
 <body>
-        <header>
-            <div class="container">
-                <nav class="navbar" id='navbar'>
+    <header>
+        <div class="container">
+            <nav class="navbar" id='navbar'>
 
-                    <div class="humburger-menu" id="humburger-menu">
-                        <div class='line line-1'></div>
-                        <div class='line line-2'></div>
-                        <div class='line line-3'></div>
+                <div class="humburger-menu" id="humburger-menu">
+                    <div class='line line-1'></div>
+                    <div class='line line-2'></div>
+                    <div class='line line-3'></div>
 
-                    </div>
-                    <ul class="nav-list">
-                        <li class="nav-item">
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">Home</a>
-                        </li>
+                        <a href="" class="nav-link">Home</a>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">Jordan</a>
-                        </li>
+                        <a href="" class="nav-link">Jordan</a>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">Syria</a>
-                        </li>
+                        <a href="" class="nav-link">Syria</a>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">Turkey</a>
-                        </li>
+                        <a href="" class="nav-link">Turkey</a>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">Iraq</a>
-                        </li>
+                        <a href="" class="nav-link">Iraq</a>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">Order</a>
-                        </li>
-                        <li class="nav-item">
+                        <a href="" class="nav-link">Order</a>
+                    </li>
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">suggest a dish</a>
-                        </li>
+                        <a href="" class="nav-link">suggest a dish</a>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
 
-                            <a href="" class="nav-link">About us</a>
-                        </li>
+                        <a href="" class="nav-link">About us</a>
+                    </li>
 
-                    </ul>
-
-
-                </nav>
-
-            </div>
+                </ul>
 
 
+            </nav>
+
+        </div>
 
 
 
 
-            <!-- Start right Side  -->
-            <div id="headerRightSide">
-                <img id="LOGOPIC" src="/images/23f6962c-0cd4-4ec5-8cde-130ca5d1f8b8_200x200.png">
 
 
-            </div>
+        <!-- Start right Side  -->
+        <div id="headerRightSide">
+            <img id="LOGOPIC" src="/images/23f6962c-0cd4-4ec5-8cde-130ca5d1f8b8_200x200.png">
 
-            <!-- finish right side -->
 
-        </header>
+        </div>
+
+        <!-- finish right side -->
+
+    </header>
 
     <main>
         <div id="backgroundImg"></div>
@@ -90,61 +90,76 @@
         <!-- name, country, info, imgPath, ingredients, instructions -->
         <div id="mainContent">
             <form action="" id="addNewDishForm">
-                <fieldset id="generalData">
+                <fieldset id="generalData" class="recipeFields">
                     <!-- the action will be empty in 201 -->
                     <!-- Name -->
-                    <label for="nameOfTheDish"><span> Dish Name:</span></label>
-                    <input type="text" id="nameOfTheDish" name="dishName" value="">
+                    <label for="nameOfTheDish"><span> Dish Name:</span>
+                        <input type="text" id="nameOfTheDish" name="dishName" value="">
+                    </label>
 
                     <!-- Country  -->
-                    <label for="countryNewDish"><span>Country</span></label>
-                    <select name="countryNewDish" id="countryNewDish">
-                        <option value="jordan">Jordan</option>
-                        <option value="iraq">Iraq</option>
-                        <option value="turkey">Turkey</option>
-                        <option value="syria">Syria</option>
-                    </select>
+                    <label for="countryNewDish"><span>Country</span>
+                        <select name="countryNewDish" id="countryNewDish">
+                            <option value="Jordan">Jordan</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Syria">Syria</option>
+                        </select>
+                    </label>
                     <!-- Dish Type  -->
-                    <label for="TypeDish"><span>Type</span></label>
-                    <select name="dishType" id="TypeDish">
-                        <option value="breakfast">Breakfast</option>
-                        <option value="lunch">Lunch</option>
-                        <option value="dinner">Dinner</option>
-                    </select>
-                    <!-- this data for Recipe -->
-                    <fieldset id="recipeField">
-                        <!-- Tilte of New field -->
-                        <h1>Recipe</h1>
+                    <label for="TypeDish"><span>Type</span>
+                        <select name="dishType" id="TypeDish">
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+
+                <fieldset id="recipeField" class="recipeFields">
+                    <!-- Tilte of New field -->
+                    <h1>Recipe</h1>
+
+                    <!-- this button for add now ingredient , must link it with laibrary -->
+                    <button class="btn" id="addButton">+</button>
+                    <label for="ingredientNew"> ingredient
+
+                        <input type="text " class="inputsRecipeInput" id="ingredientNew" name="ingredientNew" required>
+                    </label>
+                    <label for="Quantity"> Quantity
+
+                        <input type="number" class="inputsRecipeInput" id="Quantity" name="Quantity" min="0"
+                        novalidate="novalidate" placeholder="gram" required>
+                    </label>
                         
-                        <!-- this button for add now ingredient , must link it with laibrary -->
-                        <button class="btn" id="addButton">Add</button>
-                        <label for="ingredientNew"> ingredient</label>
-                        <input type="text " class="inputsRecipeInput" id="ingredientNew" name="ingredientNew">
-                        <label for="Quantity"> Quantity</label>
-                        <input type="number" class="inputsRecipeInput" id="Quantity" name="Quantity" min="0" novalidate="novalidate" placeholder="gram">
-                        
-                        <ol id="listOfIngrediants">
-                        </ol>
-                        <!--  -->
+                    <ul id="listOfIngrediants">
+                    </ol>
+                    <!--  -->
+                </fieldset>
+                <fieldset class="recipeFields">
 
-                        <label class="inputsRecipeLabel" for="instructions">How to prepare</label>
-                        <input type="text" id="instructions" class="inputsRecipeInput" name="instructions" placeholder="please write the steps one by one ">
+                    <label class="inputsRecipeLabel" for="instructions">How to prepare</label>
+                    <input type="text" id="instructions" class="inputsRecipeInput" name="instructions"
+                        placeholder="please write the steps one by one ">
 
 
 
-                        <button class="btn" id="addInstruction">Add</button>
-                        <ol id="listOfInstructions">
-                        </ol>
+                    <button class="btn" id="addInstruction">Add</button>
+                    <ol id="listOfInstructions">
+                    </ol>
 
-                        <!-- this p for show procedures  for prepared -->
-                        
-                        <!-- General describtion -->
-                        <textarea class="inputsRecipeInput" placeholder="General description for the dish "></textarea>
-                        <label class="inputsRecipe" for="img">Upload Image:</label>
-                        <!-- <input type="file" id="myFile" name="filename"> -->
-                        <input type="file" class="inputsRecipeInput" id="UploadImage" name="UploadImage" accept="image/*">
-                        <input class="btn" type="submit" id='submitButtonbody' value="Finish">
-                    </fieldset>
+                </fieldset>
+                <!-- this p for show procedures  for prepared -->
+
+                <fieldset class="recipeFields">
+
+                    <!-- General describtion -->
+                    <textarea class="inputsRecipeInput" placeholder="General description for the dish "></textarea>
+                    <label class="inputsRecipe" for="img">Upload Image:</label>
+                    <!-- <input type="file" id="myFile" name="filename"> -->
+                    <input type="text" class="inputsRecipeInput" id="UploadImage" name="UploadImage" accept="image/*">
+                    <input class="btn" type="submit" id='submitButtonbody' value="Finish">
                 </fieldset>
             </form>
         </div>

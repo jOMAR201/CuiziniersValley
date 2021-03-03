@@ -39,6 +39,7 @@ function ingrediantList(event) {
     let Quantity = document.getElementById("Quantity").value;
     IngredaintInputAndQuantity = IngredaintInput + ' ' + Quantity + ' gram';
     ingrediantArray.push((IngredaintInputAndQuantity));
+    // Quantity.textContent = '';
     // console.log(ingrediantArray);
     // console.log(ingrediantArray);
 
@@ -134,5 +135,5 @@ function CreateNewIgrediant(event) {
     let describtion = document.getElementById("info").value;
     // console.log("describtion", describtion);
     // add new object  from form data
-    let NewItem=new DishObject(name, country, Type, describtion, imagePath, ingrediantArray, instructionArray);
+    new DishObject(name, country, Type, describtion, imagePath, ingrediantArray, instructionArray);
 }
