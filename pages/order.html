@@ -91,100 +91,102 @@
 
     <div id="backGroundImg"></div>
 
-    <div id="MainArea">
 
 
 
-      <section class="orderForm">
-        <form id="restaurntOrder">
-          <fieldset>
+
+    
+      <form id="restaurntOrder">
+        
+          <label>
+            <span class="allLabels">Main dish</span>
+            <select id="mainDish" required></select>
             <label>
-              <span class="allLabels">Main dish</span>
-              <select id="mainDish" required></select>
+              <span class="allLabels"> Number of meals </span>
+              <input id="quantityMain" type="number" class="quants" value="1" required />
+              
             </label>
-            <br>
+          </label>
+          
 
 
+          
+          
+          <label>
+            <span class="allLabels">Side dish</span>
+            <select id="sideDish" required></select>
             <label>
-              <span class="allLabels">Restaurant</span>
-              <select id="restaurant" required>restaurant</select>
-              <br>
+              <span class="allLabels"> Number of sides </span>
+              <input id="quantitySide" type="number" class="quants" value="0" required />
             </label>
-
+          </label>
+          
+          
+          
+          
+          
+          <label>
+            <span class="allLabels">Drinks</span>
+            <select id="drink" required></select>
             <label>
-              <span class="allLabels"> Add</span>
-              <input id="quantityMain" type="number" value="1" required />
-              <br>
+              <span class="allLabels"> Number of drinks</span>
+              <input id="quantityDrink" type="number" class="quants" value="0" required />
             </label>
+          </label>
+          
+          
+          
+          <label>
+            <span class="allLabels">Restaurant</span>
+            <select id="restaurant" required>restaurant</select>
+            
+          </label>
+          
 
-            <label>
-              <span class="allLabels">Side dish</span>
-              <select id="sideDish" required></select>
-            </label>
-            <br>
-
-            <label>
-              <span class="allLabels"> Add</span>
-              <input id="quantitySide" type="number" value="0" required />
-            </label>
-            <br>
-
-
-            <label>
-              <span class="allLabels">Drinks</span>
-              <select id="drink" required></select>
-            </label>
-            <br>
-
-            <label>
-              <span class="allLabels"> Add</span>
-              <input id="quantityDrink" type="number" value="0" required />
-            </label>
-            <br>
+          <label>
+            <span class="allLabels">Phone number</span>
+            <input type="tel" id="phoneNumber" value="07" required>
+          </label>
+          
 
 
-            <label>
-              <span class="allLabels">Phone number</span>
-              <input type="tel" id="phoneNumber" value="07" required>
-            </label>
-            <br>
+          <label>
+            <span id="addressWord" class="allLabels">Address</span>
+            <textarea name="address" id="address" cols="30" rows="5" required></textarea>
+          </label>
+          
 
-
-            <label>
-              <span id="addressWord" class="allLabels">Address</span>
-              <textarea name="address" id="address" cols="30" rows="5" required></textarea>
-            </label>
-            <br>
-
+          <fieldset class="feildBtns">
 
             <input type="submit" value="Place Your Order" id="submit" />
             <input type="reset" value="Reset All Fields" id="reset">
           </fieldset>
-        </form>
-      </section>
-      <section class="newaOrder">
-        <div id="newOrder-container">
-          <table id="orderTable">
-            <thead>
-              <tr>
-                <th>Delete</th>
-                <th>Main Quantity</th>
-                <th>Main Dish</th>
-                <th>Sides Quantity</th>
-                <th>Side Dish</th>
-                <th>Drinks Quantity</th>
-                <th>Drink </th>
-                <th>Restaurant</th>
-                <th>Total price </th>
+        
+      </form>
+    
+    <section class="newaOrder">
+      <div id="newOrder-container">
+        <table id="orderTable">
+          <thead>
+            <tr>
+              <th>Delete</th>
+              <th>Main Quantity</th>
+              <th>Main Dish</th>
+              <th>Sides Quantity</th>
+              <th>Side Dish</th>
+              <th>Drinks Quantity</th>
+              <th>Drink </th>
+              <th>Restaurant</th>
+              <th>Total price </th>
 
-              </tr>
-            </thead>
-            <tbody id="tbody"></tbody>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
 
-          </table>
-        </div>
-      </section>
-    </div>
+        </table>
+      </div>
+    </section>
+
 
   </main>
   <div id="footer">
