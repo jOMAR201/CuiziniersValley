@@ -15,7 +15,7 @@ h4 {
     height: 100vh;
     width: 100%;
     background: url(/images/asian-food-background-various-ingredients-rustic-stone-top-view-vietnam-thai-cuisine-148762904.jpg);
-    display: absolute;
+
     position: fixed;
     top: 0;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ article .cardImgs {
 label{
     margin-left: 0.5rem;
 }
-li:hover {
+.recipe li:hover {
     background-color: #202327cc;
 }
 .orderBtn:hover {
@@ -143,11 +143,12 @@ li:hover {
 }
 
 .recipe {
+    
     width: 95%;
     display: flex;
     justify-content: space-between;
-    height: 90%;
-
+    height: 100%;
+    
 }
 
 .recipe:nth-child(n) {
@@ -155,7 +156,27 @@ li:hover {
 }
 
 .recipe ul {
+    background:url(/images/DD-Old-Note-Paper-Background-22312-Preview.jpg);
+    flex-grow: 1;
+    
+    min-height: 100%;
+    height:100%;
+    background-size: cover;
+    line-height:1.3rem;
+    border-radius:10px;
+    box-shadow: 1px 1px 10px 0 #fff;
+}
+.recipe ul li{
+    font-size:1.3em;
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+    
+    width: fit-content;
+}
+.recipe ol{
     transform: translateX(2rem);
+    flex-grow: 1;
+    /* justify-self: start ; */
 }
 
 .recipe button {
