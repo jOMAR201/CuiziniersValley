@@ -1,8 +1,7 @@
 /* setting the Page */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -600,21 +599,13 @@ input[type=reset]:hover {
     }
 }
 
-p {
-    font-family: 'Cinzel', serif;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    line-height: 2.5rem;
-}
 
-h1,
-h2 {
-    font-family: 'Seymour One', sans-serif;
-    line-height: 3rem;
-}
 
-h3,
-h4 {
-    font-family: 'Montserrat Alternates', sans-serif;
-    line-height: 2rem;
-}
+
+
+
+
+
+
+
+

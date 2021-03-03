@@ -98,12 +98,14 @@ function createRecipeDiv(dishObject) {
     // div.style.transform = 'rotateY(180deg)'
     // div.style.display = 'none';
     let ingredientsList = document.createElement('ul');
+    ingredientsList.style.listStyleType = 'none';
     let instructionsList = document.createElement('ol');
     div.appendChild(ingredientsList);
     div.appendChild(instructionsList);
     for (let ing in dishObject.dishIngredients) {
         let ingItem = document.createElement('li');
-        ingItem.textContent = dishObject.dishIngredients[ing];
+        ingItem.innerHTML = `<li ><input class="listItem" type="checkbox" name="item0${ing}" id="item0${ing}"><label for="item0${ing}">${dishObject.dishIngredients[ing]}</label></li>`;
+        // ingItem.textContent = dishObject.dishIngredients[ing];
         ingredientsList.appendChild(ingItem);
     }
     for (let inst in dishObject.dishInstructions) {
@@ -141,4 +143,24 @@ function buttonsClickHandler(e) {
         parentSection.lastChild.style.transform = 'rotateX(180deg)';
         parentSection.lastChild.style.transition = 'transform 2s';
     }
+}
+
+let el = document.getElementsByClassName('listItem');
+for (let i = 0; i < el.length; i++) {
+    el[i].addEventListener('change', itmeDone, false);
+}
+
+function itmeDone(e) {
+    let target, itemParent;
+    target = e.target;
+    itemParent = target.parentNode;
+
+    if (this.checked) {
+        itemParent.style.textDecoration = 'line-through';
+        itemParent.style.color = 'rgba(0,0,0,0.6)';
+    } else {
+        itemParent.style.textDecoration = 'none';
+        itemParent.style.color = 'rgba(0,0,0,1)';
+    }
+    e.preventDefault();
 }

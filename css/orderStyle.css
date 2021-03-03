@@ -1,34 +1,167 @@
+*{
+  color: #000;
+}
+
+header {
+  min-height: 20vh;
+  height: fit-content !important;
+}
+main{
+  background-image: url(/images/salad-2068220.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+body{
+  background-image: url(/images/salad-2068220.jpg);
+  background: cover ;
+  background-repeat: no-repeat;
+  z-index: 4;
+  min-height: 200vh;
+}
+
+#MainArea{
+  position: relative;
+
+  width: 50%;
+}
+
+
+
 header {
   min-height: 20vh;
   height: fit-content !important;
 }
 form{
+  z-index: 1;
+  border: hidden;
   width: 100%;
-  height: 100%;
-}
-section.orderForm{
-  height:70vh;
-  display: flex;
-  justify-content: center;
-}
-fieldset{
-  width: 50%;
-  height: 80%;
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items:baseline;
-  flex-wrap: wrap;
-  align-content: center;
+  height: 150%;
+  
+  margin-bottom: 50px;
 }
 
-table{
-  border-width: 3px;
-  border-style: solid;
-  border-color: black;
+
+section.orderForm{
+  /* display: flex; */
+  position: relative;
+  height:70vh;
+  left: 400px;
+  align-items: center;
+
+  padding: 10px;
+  border: hidden;
+  /* border: black solid; */
+
+   margin: left 450px;
 }
+fieldset{
+  width: 70%;
+  border: hidden;
+  align-items: center;
+background-color: rgba(240, 248, 255, 0.541);
+border-radius: 20%;
+  height: 80%;
+  padding: 50px;
+  color: black;
+ 
+}
+.allLabels{
+  display: inline-block;
+  word-wrap: normal;
+
+  /* border: solid black; */
+  width: 225px;
+  white-space: nowrap;
+
+  font-size: 35px;
+  text-align: center;
+  color: whitesmoke;
+
+}
+
+
+select{
+  width: 305px;
+  height:40px;
+  font-size: 24px;
+
+}
+  
+ 
+input{
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+}
+
+#address{
+  position: relative;
+  width: 300px;
+display: inline-flex; 
+margin-top: 10px;
+margin-left: 0px;
+bottom: 0;
+/* border: black solid; */
+}
+
+#addressWord{
+  position: relative;
+  bottom :40px;
+margin-top:0;}
+
+
+
+
+
+#orderTable{
+  position: relative;
+  /* border: red solid; */
+  left: 400px;
+  top: 300px;  width: 1500px;
+  height: 400px;
+  
+  font-size: 24px;
+}
+
+
 th{
-  border-width: 3px;
-  border-style: solid;
-  border-color: black;
+  border: solid whitesmoke;
+  background-color: rgba(71, 205, 209, 0.363);
+
+  height: 60px;
+color: blanchedalmond;}
+
+
+
+#tbody tr td{
+  color: rgb(250, 245, 246);
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(145, 141, 141, 0.575);
+
+  border: whitesmoke solid;
+}
+
+#delTDBtn{
+  width: 50px;
+
+  ;
+}
+
+
+#submit{
+  position: relative;
+  left: 230px;
+  margin: 0 0 75 450px;
+  width: 200px;
+  height: 50px;
+}
+#reset{
+  margin: 0 0 75 650px;
+  position: relative;
+  left: 230px;
+  width: 200px;
+  height: 50px;
 }
