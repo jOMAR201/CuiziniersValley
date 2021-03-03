@@ -1,11 +1,7 @@
-
-
-
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
-
 
 h4 {
     font-size: smaller;
@@ -21,7 +17,6 @@ h4 {
     background-attachment: fixed;
     top: 0;
     z-index: -5;
-
 }
 
 .cuisineSection {
@@ -35,25 +30,26 @@ h4 {
 
 .cardDiv * {
     color: #FFFFFF;
+}
 
+p {
+    width: 400px;
 }
 
 .cardDiv {
-
+    margin-top: 5%;
     width: 80%;
     min-height: 35vh;
     filter: blur(0.8px);
     opacity: .9;
-
-    height: fit-content;
-    margin: 3rem auto;
+    height: 500px;
+    margin: 5rem auto;
     background-color: #202327ad;
     transform: translateX(5rem) perspective(1500px) rotateY(7deg);
     border-radius: 1rem;
     border: 0.5rem inset rgba(255, 255, 255, 0.445);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     transition: transform 1s ease 0s;
-
 }
 
 .cardDiv:hover {
@@ -62,11 +58,8 @@ h4 {
     transform: perspective(3000px) rotateY(0deg);
 }
 
-
 main article {
-
     width: 98%;
-
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -74,17 +67,15 @@ main article {
 }
 
 article .cardImgs {
-
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-
-    min-width: 40%;
+    /* min-width: 40%; */
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     transform: skewX(-10deg) translateX(-10%);
     height: 100%;
-    width: 40% !important;
+    width: 50% !important;
 }
 
 .btnDivs {
@@ -94,7 +85,6 @@ article .cardImgs {
     flex-wrap: wrap;
     align-items: center;
     justify-items: center;
-
 }
 
 .info {
@@ -131,23 +121,24 @@ article .cardImgs {
 .orderBtn {
     background-color: #34626c !important;
 }
-label{
+
+label {
     margin-left: 0.5rem;
 }
+
 .recipe li:hover {
     background-color: #202327cc;
 }
+
 .orderBtn:hover {
     background-color: rgba(52, 98, 108, 0.651) !important;
 }
 
 .recipe {
-    
     width: 95%;
     display: flex;
     justify-content: space-between;
     height: 100%;
-    
 }
 
 .recipe:nth-child(n) {
@@ -155,24 +146,24 @@ label{
 }
 
 .recipe ul {
-    background:url(/images/DD-Old-Note-Paper-Background-22312-Preview.jpg);
+    background: url(/images/DD-Old-Note-Paper-Background-22312-Preview.jpg);
     flex-grow: 1;
-    
     min-height: 100%;
-    height:100%;
+    height: 100%;
     background-size: cover;
-    line-height:1.3rem;
-    border-radius:10px;
+    line-height: 1.3rem;
+    border-radius: 10px;
     box-shadow: 1px 1px 10px 0 #fff;
 }
-.recipe ul li{
-    font-size:1.3em;
+
+.recipe ul li {
+    font-size: 1.3em;
     padding-top: 0.2rem;
     padding-left: 1rem;
-    
     width: fit-content;
 }
-.recipe ol{
+
+.recipe ol {
     transform: translateX(2rem);
     flex-grow: 1;
     /* justify-self: start ; */
@@ -197,7 +188,7 @@ label{
     cursor: pointer;
     transition: .8s;
 }
-.recipe button:hover{
-        background: #7db2fc93;
 
+.recipe button:hover {
+    background: #7db2fc93;
 }
