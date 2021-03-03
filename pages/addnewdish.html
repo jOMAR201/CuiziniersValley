@@ -4,8 +4,7 @@
 
 <head>
     <title>Add new dish </title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/addDishstyle.css">
 </head>
@@ -24,45 +23,48 @@
                 <ul class="nav-list">
                     <li class="nav-item">
 
-                        <a href="" class="nav-link">Home</a>
+                        <a href="../index.html" class="nav-link">Home</a>
                     </li>
 
                     <li class="nav-item">
 
-                        <a href="" class="nav-link">Jordan</a>
+                        <a href="/pages/jordan.html" class="nav-link">Jordan</a>
                     </li>
 
                     <li class="nav-item">
 
-                        <a href="" class="nav-link">Syria</a>
+                        <a href="/pages/syria.html" class="nav-link">Syria</a>
                     </li>
 
                     <li class="nav-item">
 
-                        <a href="" class="nav-link">Turkey</a>
+                        <a href="/pages/turkey.html" class="nav-link">Turkey</a>
                     </li>
 
                     <li class="nav-item">
 
-                        <a href="" class="nav-link">Iraq</a>
+                        <a href="/pages/iraq.html" class="nav-link">Iraq</a>
                     </li>
 
                     <li class="nav-item">
 
-                        <a href="" class="nav-link">Order</a>
+                        <a href="/pages/order.html" class="nav-link">Order</a>
+                    </li>
+                    <!-- <li class="nav-item">
+
+                        <a href="/pages/addnewdish.html" class="nav-link">suggest a dish</a>
+                    </li> -->
+
+                    <li class="nav-item">
+
+                        <a href="/pages/aboutus.html" class="nav-link">About us</a>
                     </li>
                     <li class="nav-item">
 
-                        <a href="" class="nav-link">suggest a dish</a>
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a href="" class="nav-link">About us</a>
+                        <a href="/pages/contactus.html" class="nav-link">Contact us</a>
                     </li>
 
                 </ul>
-
 
             </nav>
 
@@ -85,20 +87,25 @@
     </header>
 
     <main>
-        <div id="backgroundImg"></div>
+        <div id="backgroundImg">
+
+        </div>
         <!-- add new desh by user, In this form ; user will add desh to the specific country  -->
         <!-- name, country, info, imgPath, ingredients, instructions -->
-        <div id="mainContent">
-            <form action="" id="addNewDishForm">
-                <fieldset id="generalData" class="recipeFields">
+
+        <form action="" id="addNewDishForm">
+
+            <fieldset id="generalData">
+                <fieldset id="generalInfo">
+
                     <!-- the action will be empty in 201 -->
                     <!-- Name -->
-                    <label for="nameOfTheDish"><span> Dish Name:</span>
+                    <label for="nameOfTheDish"> Dish Name:
                         <input type="text" id="nameOfTheDish" name="dishName" value="">
                     </label>
 
                     <!-- Country  -->
-                    <label for="countryNewDish"><span>Country</span>
+                    <label for="countryNewDish">Country
                         <select name="countryNewDish" id="countryNewDish">
                             <option value="Jordan">Jordan</option>
                             <option value="Iraq">Iraq</option>
@@ -107,7 +114,7 @@
                         </select>
                     </label>
                     <!-- Dish Type  -->
-                    <label for="TypeDish"><span>Type</span>
+                    <label for="TypeDish">Type
                         <select name="dishType" id="TypeDish">
                             <option value="breakfast">Breakfast</option>
                             <option value="lunch">Lunch</option>
@@ -116,53 +123,73 @@
                     </label>
                 </fieldset>
 
+                <!-- General describtion -->
+                <label for="infoText">GIVE MORE INFO:
 
-                <fieldset id="recipeField" class="recipeFields">
-                    <!-- Tilte of New field -->
-                    <h1>Recipe</h1>
+                    <textarea class="inputsRecipeInput" id="infoText"
+                        placeholder="General description for the dish "></textarea>
+                </label>
+                <label class="inputsRecipe" id="UploadImage" for="img">IMAGE URL/LINK:
+                    <input type="text" class="inputsRecipeInput" id="img" name="UploadImage" accept="image/*">
+                </label>
+            </fieldset>
+
+            <fieldset id="recipeField" class="recipeFields">
+                <!-- Tilte of New field -->
+                <h1>Recipe</h1>
+                <fieldset id="recipeCont">
 
                     <!-- this button for add now ingredient , must link it with laibrary -->
-                    <button class="btn" id="addButton">+</button>
                     <label for="ingredientNew"> ingredient
 
                         <input type="text " class="inputsRecipeInput" id="ingredientNew" name="ingredientNew" required>
                     </label>
-                    <label for="Quantity"> Quantity
+                    <label for="Quantity" id="quant"> Quantity
 
                         <input type="number" class="inputsRecipeInput" id="Quantity" name="Quantity" min="0"
-                        novalidate="novalidate" placeholder="gram" required>
+                            novalidate="novalidate" placeholder="quant" required>
                     </label>
+                    <label for="unit">Unit:
+                        <select name="unit" id="units">
+                            <option value="oz">oz</option>
+                            <option value="grams">grams</option>
+                            <option value="pound">pound</option>
+                            <option value="peices">peices</option>
+                        </select>
+                    </label>
+                    <button class="btn" id="addButton">ADD</button>
+                </fieldset>
+                <ul id="listOfIngrediants">
+                </ul>
+                <!--  -->
+            </fieldset>
+
+            <fieldset class="recipeFields">
+                <fieldset id="insCont">
+
+                    <label class="inputsRecipeLabel" for="instructions">How to prepare
                         
-                    <ul id="listOfIngrediants">
-                    </ol>
-                    <!--  -->
-                </fieldset>
-                <fieldset class="recipeFields">
-
-                    <label class="inputsRecipeLabel" for="instructions">How to prepare</label>
-                    <input type="text" id="instructions" class="inputsRecipeInput" name="instructions"
+                        <input type="text" id="instructions" class="inputsRecipeInput" name="instructions"
                         placeholder="please write the steps one by one ">
-
-
-
+                    </label>
+                    
+                    
+                    
                     <button class="btn" id="addInstruction">Add</button>
-                    <ol id="listOfInstructions">
-                    </ol>
-
                 </fieldset>
-                <!-- this p for show procedures  for prepared -->
 
-                <fieldset class="recipeFields">
+                <ol id="listOfInstructions">
+                </ol>
 
-                    <!-- General describtion -->
-                    <textarea class="inputsRecipeInput" placeholder="General description for the dish "></textarea>
-                    <label class="inputsRecipe" for="img">Upload Image:</label>
-                    <!-- <input type="file" id="myFile" name="filename"> -->
-                    <input type="text" class="inputsRecipeInput" id="UploadImage" name="UploadImage" accept="image/*">
-                    <input class="btn" type="submit" id='submitButtonbody' value="Finish">
-                </fieldset>
-            </form>
-        </div>
+            </fieldset>
+            <!-- this p for show procedures  for prepared -->
+
+
+
+            <input class="btn" type="submit" id='submitButtonbody' value="ADD THE DISH">
+
+        </form>
+
     </main>
 
     <div id="footer">
