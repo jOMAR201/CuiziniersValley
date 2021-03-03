@@ -18,7 +18,7 @@ let instructions = document.getElementById("listOfInstructions").value;
 let instructionItem;
 let instructionArray = [];
 let IngredaintInputAndQuantity;
-
+/* 1. get value from the input field 2. add lisht 3. append input to the list  */
 function ingrediantList(event) {
     event.preventDefault();
     let IngredaintInput = document.getElementById("ingredientNew").value;
