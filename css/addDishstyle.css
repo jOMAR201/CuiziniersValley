@@ -1,5 +1,10 @@
 /* add background image for body */
-
+main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
 #backgroundImg {
     /* position: absolute; */
     width: 100%;
@@ -12,79 +17,97 @@
     background-attachment: fixed;
     z-index: -5;
 }
-
-
-/*this data for name country and type of dish */
-
-.recipeFields {
+#addNewDishForm {
     font-size: 28px;
     border: #34626c 3px solid;
     border-radius: 10px;
-    text-align: center;
-    margin: 0 auto;
-    width: 70%;
-    background-color: rgb(52, 98, 108, 0.5);
-    width: 60%;
+    background-color: rgba(52, 98, 108, 0.685);
     color: white;
-    margin-bottom: 5%;
+    /* max-width:70%; */
+    width: 80%;
+    min-width: fit-content;
+}
+#generalData{
+    min-height:33vh;
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    align-items: center;
+    border:none;
+}
+#generalInfo{
+    border:none;
+    display:flex;
+    justify-content:space-between;
+    width: 100%;
+}
+fieldset{
+    height:fit-content;
+    margin: 1rem auto;
+}
+label{
+    min-width: fit-content;
+    margin:2rem;
+    min-height: fit-content;
+    display:flex;
+    align-items: center;
+    color: white;
+    font-size:1.8rem;
+}
+input{
+    margin-left: 0.4rem;
+}
+label,select,textarea{
+    margin-left: 1rem;
 }
 
-#addNewDishForm {
-    text-align: center;
-}
 
-#submitButtonbody {
-    background-color: #34626c;
-    width: 20%;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    margin-bottom: 3%;
-    border: none;
-    border-radius: 7px;
+#img{
+    width: 50rem;
 }
-
-.btn {
-    background-color: #34626c;
-    width: 10%;
-    color: whitesmoke;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    border-radius: 7px;
-    border: none;
-    margin: 2%;
-}
-
-#submitButton {
-    background-color: #34626c;
-    width: 40.5%;
-    font-size: 23px;
-    width: 50%;
-    display: inline;
-    border: 1px solid whitesmoke;
-    text-align: start;
-    color: whitesmoke;
-    margin-right: 1%;
-    margin-bottom: 2%;
-    height: 50px;
-    top: 77px;
-    text-align: center;
-}
-
-label {
-    margin: 2%;
-    margin-top: 2%;
-}
-
 textarea {
-    width: 550px;
+    width: 50rem;
     background: transparent;
     background-color: rgb(245, 245, 245, 0.7);
     border-radius: 7px;
     border: none;
     color: #383e56;
     font-size: 30px;
+    height:20vh;
+}
+
+.recipeFields{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+#insCont{
+    display: flex;
+    width: fit-content;
+    width: 100%;
+    border: none;
+    justify-content:space-around;
+}
+#instructions{
+    width: 30rem;
+}
+#recipeCont{
+    display: flex;
+    width: fit-content;
+    width: 100%;
+    border: none;
+    justify-content:space-around;
+}
+#Quantity{
+    width: 30%;
+}
+#quant{
+    width: 10%;
+    margin:0;
+}
+#units{
+    width: 50%;
 }
 
 main input {
@@ -97,8 +120,8 @@ main input {
     border-bottom: 2px solid #34626c;
     font-size: 30px;
 }
-
 #countryNewDish,
+select,
 #TypeDish {
     width: 250px;
     background: transparent;
@@ -120,56 +143,72 @@ select::placeholder {
     color: #34626c;
 }
 
-label {
-    display: block;
-    width: 30px;
-    margin-left: 4%;
+#listOfIngrediants {
+    min-width: 30%;
+    width: fit-content;
+}
+.btn {
+    background-color: #34626c;
+    width: 10%;
+    color: whitesmoke;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 7px;
+    border: none;
+    margin: 2%;
+}
+/*this data for name country and type of dish */
+/* 
+
+
+#submitButtonbody {
+    background-color: #34626c;
+    width: 20%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 7px;
 }
 
-label span {
-    display: inline-block;
-    text-align: left;
-    width: 300px;
+
+#submitButton {
+    background-color: #34626c;
+    width: 40.5%;
+    font-size: 23px;
+    width: 50%;
+    display: inline;
+    border: 1px solid whitesmoke;
+    text-align: start;
+    color: whitesmoke;
+    margin-right: 1%;
+    margin-bottom: 2%;
+    height: 50px;
+    top: 77px;
+    text-align: center;
 }
+
+ */
+
+
+
+
+
+
+
+
 
 
 /* now internal form */
 
-#addButton {
-    position: relative;
-    display: inline-block;
-    top: 140px;
-    left: 250px;
-}
 
-.inputsRecipeLabel {
-    float: left;
-    text-align: left;
-}
 
 
 /*the p is always block */
 
-#UploadImage {
-    width: 400px;
-}
-
+/* 
 input#instructions {
     width: 400px;
-}
-
-
-/* list style , after click on add  */
-
-#listOfIngrediants {
-    border: black solid 3px;
-    list-style-type: none;
-    /* for bull remve */
-    width: 50%;
-    margin: 0 auto;
-    text-align: start;
-}
-
-li {
-    margin-left: 5%;
-}
+} */
