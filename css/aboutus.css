@@ -5,13 +5,13 @@
   }
   
   body{
-    background: #81c644;
+    background: #96a4cc;
     font-family: 'Josefin Sans', sans-serif;
   }
   
   .wrapper{
-    margin-top: 400px;
-  background-color: #81c644;
+    margin-top: 50px;
+  background-color: #47d4d441;
   }
   
   .wrapper h1{
@@ -41,13 +41,13 @@
   }
   
   .team .team_member h3{
-    color: #81c644;
+    color: rgba(15, 3, 3, 0.712);
     font-size: 26px;
     margin-top: 50px;
   }
   
   .team .team_member p.role{
-    color: rgb(134, 162, 212);
+    color: rgb(0, 0, 0);
     margin: 12px 0;
     font-size: 12px;
     font-weight: bolder;
@@ -55,6 +55,7 @@
     
   }
   .team .team_member p{
+    font-size: 14px;
     font-style: italic;  }
   @keyframes mover{
     0%{
