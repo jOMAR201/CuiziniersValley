@@ -1,97 +1,104 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#backgroundImg {
+  background: url(https://murals-weblinc.netdna-ssl.com/product_images/vintage-black-and-grey-background-mural-rl74683052/5ecab84fb17c540072d77cb1/zoom.jpg?c=1590343758);
+  position:fixed;
+  height:100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  top: 0;
+  background-size:cover;
+  z-index: -5;
   
-  body{
-    background: #81c644;
-    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+.wrapper h1 {
+  /* font-family: 'Allura', cursive; */
+  font-size: 52px;
+  margin-bottom: 60px;
+  color:#fff;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member {
+  background: #fff;
+  border-radius: 50px;
+  margin: 10px;
+  border: 10px double rgb(102 141 92);
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 400px;
+  /* font-size: 5rem; */
+  padding: 30px;
+  line-height: 30px;
+  color: #575757;
+  position: relative;
+}
+
+.team .team_member h3 {
+  color: rgba(15, 3, 3, 0.712);
+  font-size: 32px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role {
+  color: rgb(0, 0, 0);
+  margin: 12px 0;
+  font-size: 12px;
+  font-weight: bolder;
+  animation: mover 3s linear infinite;
+
+}
+
+.team .team_member p {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+@keyframes mover {
+  0% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
   }
-  
-  .wrapper{
-    margin-top: 400px;
-  background-color: #81c644;
+
+  50% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.30);
+    transform: translateX(20px);
   }
-  
-  .wrapper h1{
-    font-family: 'Allura', cursive;
-    font-size: 52px;
-    margin-bottom: 60px;
-    text-align: center;
+
+  100% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
   }
-  
-  .team{
-    display: flex;
-    justify-content: center;
-    width: auto;
-    text-align: center;
-    flex-wrap: wrap;
-  }
-  
-  .team .team_member{
-    background: #fff;
-    margin: 5px;
-    margin-bottom: 50px;
-    width: 400px;
-    padding: 30px;
-    line-height: 30px;
-    color: #8e8b8b;  
-    position: relative;
-  }
-  
-  .team .team_member h3{
-    color: #81c644;
-    font-size: 26px;
-    margin-top: 50px;
-  }
-  
-  .team .team_member p.role{
-    color: rgb(134, 162, 212);
-    margin: 12px 0;
-    font-size: 12px;
-    font-weight: bolder;
-    animation: mover 3s linear infinite;
-    
-  }
-  .team .team_member p{
-    font-style: italic;  }
-  @keyframes mover{
-    0%{
-      text-shadow: 0 0 30px rgba(0,0,0,0);
-    }
-    50%{
-      text-shadow: 0 0 30px rgba(0,0,0,0.30);
-      transform: translateX(20px);
-    }
-    100% {
-      text-shadow: 0 0 30px rgba(0,0,0,0);
-    }
-  }
-  
-  .team .team_member .team_img{
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: #fff;
-  }
-  
-  .team .team_member .team_img img{
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border-radius: 50%;
-  }
-  .myDiv {
-    font-size: 20px;
-    border: 5px outset rgb(206, 97, 188);
-    background-color: lightblue;    
-    text-align: center;
-    margin-top: 200px;
-    height: 170px;
-    font-family:Copperplate, Papyrus, fantasy;
-  }
+}
+
+.team .team_member .team_img {
+  position: absolute;
+  top: -85px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  border-radius: 50%;
+}

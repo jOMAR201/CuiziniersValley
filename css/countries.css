@@ -15,12 +15,11 @@ h4 {
     height: 100vh;
     width: 100%;
     background: url(/images/asian-food-background-various-ingredients-rustic-stone-top-view-vietnam-thai-cuisine-148762904.jpg);
-
     position: fixed;
-    top: 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    top: 0;
     z-index: -5;
 
 }
