@@ -1,14 +1,5 @@
 "use strict";
 
-//things to do
-//1-add ingrediant function
-//2-fix the form
-//3-Local storage
-//4-css
-
-
-
-
 // add button of ingrediant list 
 let addButton = document.getElementById("addButton");
 addButton.addEventListener("click", ingrediantList);
