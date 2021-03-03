@@ -2,46 +2,46 @@
 
 
 
-const DishObject = function (name, country,type, info, imgPath, ingredients, instructions) {
-  this.dishName = name;
-  this.dishImage = imgPath;
-  this.dishCountry = country;
-  this.dishInfo = info;
-  this.dishType = type;
-  this.dishIngredients = ingredients;
-  this.dishInstructions = instructions;
-  this.addNewDish();
+const DishObject = function(name, country, type, info, imgPath, ingredients, instructions) {
+    this.dishName = name;
+    this.dishImage = imgPath;
+    this.dishCountry = country;
+    this.dishInfo = info;
+    this.dishType = type;
+    this.dishIngredients = ingredients;
+    this.dishInstructions = instructions;
+    this.addNewDish();
 }
 DishObject.allDishes = [];
 let previous;
 if (localStorage.getItem('dishesData')) {
-  previous = JSON.parse(localStorage.getItem('dishesData')); 
+    previous = JSON.parse(localStorage.getItem('dishesData'));
 }
 for (let i in previous) {
-  DishObject.allDishes.push(previous[i]);
+    DishObject.allDishes.push(previous[i]);
 }
 
-DishObject.prototype.addNewDish = function () {
-  if (!this.checkIdDishExists()) {
-    DishObject.allDishes.push(this);
-    this.saveToLocalStorage();
-  } else {
-   console.log("Dish exist");
-  }
-
-}
-
-DishObject.prototype.saveToLocalStorage = function () {
-  localStorage.setItem('dishesData',JSON.stringify(DishObject.allDishes))
-}
-
-DishObject.prototype.checkIdDishExists = function () {
-  for (let dish in DishObject.allDishes) {
-    if (DishObject.allDishes[dish].dishName.toLowerCase() === this.dishName.toLowerCase() && DishObject.allDishes[dish].dishCountry.toLowerCase() === this.dishCountry.toLowerCase()) {
-      return true;
+DishObject.prototype.addNewDish = function() {
+    if (!this.checkIdDishExists()) {
+        DishObject.allDishes.push(this);
+        this.saveToLocalStorage();
+    } else {
+        console.log("Dish exist");
     }
-  }
-  return false;
+
+}
+
+DishObject.prototype.saveToLocalStorage = function() {
+    localStorage.setItem('dishesData', JSON.stringify(DishObject.allDishes))
+}
+
+DishObject.prototype.checkIdDishExists = function() {
+    for (let dish in DishObject.allDishes) {
+        if (DishObject.allDishes[dish].dishName.toLowerCase() === this.dishName.toLowerCase() && DishObject.allDishes[dish].dishCountry.toLowerCase() === this.dishCountry.toLowerCase()) {
+            return true;
+        }
+    }
+    return false;
 }
 
 
@@ -56,6 +56,6 @@ const navbar = document.getElementById("navbar");
 menuIcon.addEventListener("click", openMenu);
 
 function openMenu() {
-  menuIcon.classList.toggle("change");
-  navbar.classList.toggle("change");
+    menuIcon.classList.toggle("change");
+    navbar.classList.toggle("change");
 }
