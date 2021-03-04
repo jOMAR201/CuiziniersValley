@@ -95,7 +95,7 @@ article .cardImgs {
 .info p{
     overflow-y: scroll;
     flex-grow: 1;
-    min-height: 78%;
+    max-height: 78%;
 }
 
 .btnDivs button {
@@ -161,7 +161,8 @@ label {
     line-height: 1.2rem;
     min-width: 40%;
     flex-wrap: wrap;
-    overflow-x: scroll;
+    overflow-y: scroll;
+    max-height:78%;
     border-radius: 10px;
     box-shadow: 1px 1px 10px 0 #fff;
 }
@@ -174,7 +175,12 @@ label {
 }
 
 .recipe ol {
-    transform: translateX(2rem);
+    padding-top: 2rem;
+    overflow-y: scroll;
+    max-height:78%;
+    /* list-style:none; */
+    padding-left:3rem;
+    /* transform: translateX(1rem); */
     flex-grow: 1;
     /* justify-self: start ; */
 }
@@ -182,7 +188,7 @@ label {
 .recipe button {
     height: fit-content;
     align-self: flex-end;
-    width: 120px;
+    width: 8rem;
     height: 70px;
     border-radius: 20px;
     background: #3380ed93;

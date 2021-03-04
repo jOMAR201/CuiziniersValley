@@ -216,6 +216,7 @@ select::placeholder {
 #listOfInstructions{
     min-width: 50%;
     padding:1rem;
+    max-width: 60%;
     width: fit-content;
     overflow-y: scroll;
     max-height: 40vh;
