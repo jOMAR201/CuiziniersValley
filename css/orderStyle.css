@@ -7,7 +7,7 @@ main {
 }
 
 #backGroundImg {
-  background-image: url(/images/salad-2068220.jpg);
+  background-image: url(../images/salad-2068220.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
