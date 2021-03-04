@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h4 {
+    font-size: smaller;
+}
+
+.backgroundImg {
+    height: 100vh;
+    width: 100%;
+    background: url(/images/asian-food-background-various-ingredients-rustic-stone-top-view-vietnam-thai-cuisine-148762904.jpg);
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    z-index: -5;
+}
+
+.cuisineSection {
+    background: transparent;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+}
+
+.cardDiv * {
+    color: #FFFFFF;
+}
+
+p {
+    /* width: 400px; */
+}
+
+.cardDiv {
+    margin-top: 5%;
+    width: 80%;
+    min-height: 60vh;
+    filter: blur(0.8px);
+    opacity: .9;
+    /* height: 500px; */
+    margin: 5rem auto;
+    background-color: #202327ad;
+    transform: translateX(5rem) perspective(1500px) rotateY(7deg);
+    border-radius: 1rem;
+    border: 0.5rem inset rgba(255, 255, 255, 0.445);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+}
+
+.cardDiv:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: perspective(3000px) rotateY(0deg);
+}
+
+main article {
+    width: 98%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: none;
+}
+
+article .cardImgs {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    /* min-width: 40%; */
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    transform: skewX(-10deg) translateX(-10%);
+    height: 100%;
+    min-width: 40% !important;
+}
+
+.btnDivs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 20%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 30px;
+    justify-items: center;
+}
+
+.info {
+    flex-grow: 1;
+}
+.info p{
+    overflow-y: scroll;
+    flex-grow: 1;
+    min-height: 78%;
+}
+
+.btnDivs button {
+    margin: 1rem 0;
+    background: #2b3c4f;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: 'Montserrat Alternates';
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 5px 20px;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.btnDivs button:hover {
+    transform: scale(1.1);
+    border: solid #222529 1px;
+    background: #1e62d060;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.orderBtn {
+    background-color: #34626c !important;
+}
+
+label {
+    margin-left: 0.5rem;
+}
+
+.recipe li:hover {
+    background-color: #202327cc;
+}
+
+.orderBtn:hover {
+    background-color: rgba(52, 98, 108, 0.651) !important;
+}
+
+.recipe {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.recipe:nth-child(n) {
+    padding: 1rem;
+}
+
+.recipe ul {
+    background: url(/images/DD-Old-Note-Paper-Background-22312-Preview.jpg);
+    flex-grow: 1;
+    min-height: 100%;
+    height: 100%;
+    background-size: cover;
+    line-height: 1.2rem;
+    min-width: 40%;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0 #fff;
+}
+
+.recipe ul li {
+    font-size: 1.3em;
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+    width: fit-content;
+}
+
+.recipe ol {
+    transform: translateX(2rem);
+    flex-grow: 1;
+    /* justify-self: start ; */
+}
+
+.recipe button {
+    height: fit-content;
+    align-self: flex-end;
+    width: 120px;
+    height: 70px;
+    border-radius: 20px;
+    background: #3380ed93;
+    font-family: 'Montserrat Alternates';
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 5px 20px;
+    box-shadow: 1px 1px 20px 0 #5f5e5e;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.recipe button:hover {
+    background: #7db2fc93;
+}

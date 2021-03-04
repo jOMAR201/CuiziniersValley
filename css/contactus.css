@@ -1,0 +1,42 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        h3{
+          font-weight: 900;
+          font-size:2rem;
+        }
+        
+        main {
+          height: 170vh;
+          border: solid rgb(255, 255, 255);
+          background-image: url(/images/127038862-greek-food-background-traditional-different-greek-dishes-top-view-.jpg);
+          background-repeat: no-repeat;
+          
+          background-size: cover;
+        }
+        
+        #container2 {
+         background-color: rgba(95, 158, 160, 0.425);
+          border-radius: 30px;
+          padding: 0 100px;
+          margin: 100px auto;
+          max-width:70%;
+          max-height: 110vh;
+          /* background-color: rgba(255, 127, 80, 0.048); */
+        }
+        
+        #sobmit{
+          width: 100px;
+          height: 33px;
+          font-size: 22px;
+        }
