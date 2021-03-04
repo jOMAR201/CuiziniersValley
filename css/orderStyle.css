@@ -180,8 +180,7 @@ th {
 }
 
 
-#submit:hover,
-#reset:hover {
+#submit:hover{
   transform: scale(1.1);
   border: solid #222529 1px;
   background: #1e62d060;
