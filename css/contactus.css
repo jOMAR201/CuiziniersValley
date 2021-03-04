@@ -19,7 +19,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         main {
           height: 170vh;
           border: solid rgb(255, 255, 255);
-          background-image: url(/images/127038862-greek-food-background-traditional-different-greek-dishes-top-view-.jpg);
+          background-image: url(../images/127038862-greek-food-background-traditional-different-greek-dishes-top-view-.jpg);
           background-repeat: no-repeat;
           
           background-size: cover;
