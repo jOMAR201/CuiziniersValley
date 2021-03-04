@@ -7,7 +7,7 @@ addButton.addEventListener("click", ingrediantList);
 let addInstructionButton = document.getElementById("addInstruction");
 addInstructionButton.addEventListener("click", instructionList);
 //submit button
-let submitButton = document.getElementById("submitButton");
+let submitButton = document.getElementById("sub");
 submitButton.addEventListener("click", CreateNewIgrediant);
 
 // list for ingrediants
@@ -76,14 +76,16 @@ let deleteInstruction = function(event) {
 };
 // ----------------------------------------------------------------------------------------SUBMIT EVENT-------------------------------------------
 function CreateNewIgrediant(event) {
+    event.preventDefault();
     let name = document.getElementById("nameOfTheDish").value;
     let country = document.getElementById("countryNewDish").value;
     let Type = document.getElementById("TypeDish").value;
     let ingredient = document.getElementById("ingredientNew").value;
     let Quantity = document.getElementById("Quantity").value;
-    let imagePath = document.getElementById("UploadImage").value;
-    let describtion = document.getElementById("info").value;
-
+    let imagePath = document.getElementById("img").value;
+    let describtion = document.getElementById("infoText").value;
+    document.getElementById("reset").click();
+    
     // add new object  from form data
     new DishObject(name, country, Type, describtion, imagePath, ingrediantArray, instructionArray);
 }

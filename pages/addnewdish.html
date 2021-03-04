@@ -101,12 +101,13 @@
                     <!-- the action will be empty in 201 -->
                     <!-- Name -->
                     <label for="nameOfTheDish"> Dish Name:
-                        <input type="text" id="nameOfTheDish" name="dishName" value="">
+                        <input type="text" id="nameOfTheDish" name="dishName" value="" required>
                     </label>
 
                     <!-- Country  -->
                     <label for="countryNewDish">Country
-                        <select name="countryNewDish" id="countryNewDish">
+                        <select name="countryNewDish" id="countryNewDish" required>
+                            <option value="" selected disabled hidden>Select option</option>
                             <option value="Jordan">Jordan</option>
                             <option value="Iraq">Iraq</option>
                             <option value="Turkey">Turkey</option>
@@ -115,7 +116,8 @@
                     </label>
                     <!-- Dish Type  -->
                     <label for="TypeDish">Type
-                        <select name="dishType" id="TypeDish">
+                        <select name="dishType" id="TypeDish" required>
+                            <option value="" selected disabled hidden>Select option</option>
                             <option value="breakfast">Breakfast</option>
                             <option value="lunch">Lunch</option>
                             <option value="dinner">Dinner</option>
@@ -140,20 +142,21 @@
                 <fieldset id="recipeCont">
 
                     <!-- this button for add now ingredient , must link it with laibrary -->
-                    <label for="ingredientNew"> ingredient
+                    <label for="ingredientNew"> Ingredient: 
 
-                        <input type="text " class="inputsRecipeInput" id="ingredientNew" name="ingredientNew" required>
+                        <input type="text " class="inputsRecipeInput" id="ingredientNew" name="ingredientNew" >
                     </label>
-                    <label for="Quantity" id="quant"> Quantity
+                    <label for="Quantity" id="quant"> Quantity: 
 
                         <input type="number" class="inputsRecipeInput" id="Quantity" name="Quantity" min="0"
-                            novalidate="novalidate" placeholder="quant" required>
+                            novalidate="novalidate" placeholder="quant" >
                     </label>
                     <label for="unit">Unit:
                         <select name="unit" id="units">
+                            <option value="" selected disabled hidden>Select</option>
                             <option value="oz">oz</option>
                             <option value="grams">grams</option>
-                            <option value="pound">pound</option>
+                            <option value="pound">pounds</option>
                             <option value="peices">peices</option>
                         </select>
                     </label>

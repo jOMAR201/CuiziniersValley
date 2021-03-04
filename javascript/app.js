@@ -26,7 +26,7 @@ DishObject.prototype.addNewDish = function() {
         DishObject.allDishes.push(this);
         this.saveToLocalStorage();
     } else {
-        console.log("Dish exist");
+        console.log("DISH EXISTS");
     }
 
 }
